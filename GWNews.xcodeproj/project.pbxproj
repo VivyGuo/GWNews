@@ -36,7 +36,7 @@
 		E79093081C16C347006A9023 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
 		E790930A1C16C347006A9023 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E790930B1C16C347006A9023 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E79093131C16C348006A9023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		E79093131C16C348006A9023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Image/Assets.xcassets; sourceTree = "<group>"; };
 		E79093181C16C348006A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		E790931D1C16C348006A9023 /* GWNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GWNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79093211C16C348006A9023 /* GWNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWNewsTests.m; sourceTree = "<group>"; };
