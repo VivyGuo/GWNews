@@ -7,3 +7,13 @@
 //
 --1.0--
 
+1.建立项目目录
+
+2.自定义宏：日志输出宏，设备判断宏
+
+3.配置：
+1)项目信息，Target->Info->Bundle Version,Bundle Name
+2)项目版本，Project->Info->Configurations,证书：Project->Building Settings->Code Signing
+3)预定义宏，Project->Building Settings->Preprocessors Macros
+4)预编译文件，Project->Building Settings->Prefix Header
+
