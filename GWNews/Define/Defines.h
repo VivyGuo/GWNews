@@ -14,22 +14,22 @@
 //日志输出宏
 #if DEBUG
 #define BASE_LOG(cls,sel) GwLog(@"%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel))
-#define BASE_LOG_INFO(cls,sel,info) GwLog(@"INFO:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),info)
-#define BASE_LOG_ERROR(cls,sel,error) GwLog(@"ERROR:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),error)
+#define BASE_INFO_LOG(cls,sel,info) GwLog(@"INFO:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),info)
+#define BASE_ERROR_LOG(cls,sel,error) GwLog(@"ERROR:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),error)
 #else
 #define BASE_LOG(cls,sel)
-#define BASE_LOG_INFO(cls,sel,info)
-#define BASE_LOG_ERROR(cls,sel,error)
+#define BASE_INFO_LOG(cls,sel,info)
+#define BASE_ERROR_LOG(cls,sel,error)
 #endif
 //日志输出函数
 #if DEBUG
-#define BASE_LOG_FUN()              BASE_LOG([self class],_cmd)
-#define BASE_LOG_INFO_FUN(info)     BASE_LOG_INFO([self class],_cmd,info)
-#define BASE_LOG_ERROR_FUN(error)   BASE_LOG_ERROR([self class],_cmd,error)
+#define BASE_LOG_FUN()          BASE_LOG([self class],_cmd)
+#define BASE_INFO_FUN(info)     BASE_INFO_LOG([self class],_cmd,info)
+#define BASE_ERROR_FUN(error)   BASE_ERROR_LOG([self class],_cmd,error)
 #else
 #define BASE_LOG_FUN()
-#define BASE_LOG_INFO_FUN()
-#define BASE_LOG_ERROR_FUN()
+#define BASE_INFO_FUN()
+#define BASE_ERROR_FUN()
 #endif
 
 //判断设备类型
