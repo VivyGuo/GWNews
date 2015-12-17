@@ -24,5 +24,10 @@ DB Utility ThirdSDK Resources
 Target->Info,删除"LaunchScreen interface files base.."项
 Target->General,Launch Image Source选择启动图片资源
 
+5.加入JSON library
+Target->Building Phases ->CompileSources->JSON库文件设置维不使用ARC -fno-objc-arc
+
+
+
 
 
