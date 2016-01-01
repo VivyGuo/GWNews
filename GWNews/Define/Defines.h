@@ -7,15 +7,15 @@
 //
 
 #if DEBUG
-#define GwLog(format,...) NSLog(format,##__VA_ARGS__)
+#define GWLog(format,...) NSLog(format,## __VA_ARGS__)
 #else
-#define GwLog(format,...)
+#define GWLog(format,...)
 #endif
 //日志输出宏
 #if DEBUG
-#define BASE_LOG(cls,sel) GwLog(@"%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel))
-#define BASE_INFO_LOG(cls,sel,info) GwLog(@"INFO:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),info)
-#define BASE_ERROR_LOG(cls,sel,error) GwLog(@"ERROR:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),error)
+#define BASE_LOG(cls,sel) GWLog(@"%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel))
+#define BASE_INFO_LOG(cls,sel,info) GWLog(@"INFO:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),info)
+#define BASE_ERROR_LOG(cls,sel,error) GWLog(@"ERROR:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),error)
 #else
 #define BASE_LOG(cls,sel)
 #define BASE_INFO_LOG(cls,sel,info)
@@ -37,7 +37,7 @@
 #define IsiPhone        (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IsRetain        ([[UIScreen mainScreen] scale] >= 2.0)
 
-#define ScreenWith      ([[UIScreen mainScreen] bounds].size.width)
+#define ScreenWidth      ([[UIScreen mainScreen] bounds].size.width)
 #define ScreenHeight    ([[UIScreen mainScreen] bounds].size.height)
 #define ScreenMaxLength (MAX(ScreenWith,ScreenHeight))
 #define ScreenMinLength (MIN(ScreenWith,ScreenHeight))
@@ -47,6 +47,9 @@
 #define IsiPhone6   (IsiPhone && ScreenMaxLength == 667.0)
 #define IsiPhone6s  (IsiPhone && ScreenMaxLength == 736.0)
 
+
+//提示框显示时间
+#define AnimationSecond     1.0
 
 
 

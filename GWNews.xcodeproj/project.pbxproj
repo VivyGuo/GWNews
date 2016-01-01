@@ -16,9 +16,21 @@
 		E79158FD1C21A8BF00F61B7E /* GWJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158F61C21A8BF00F61B7E /* GWJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E79158FE1C21A8BF00F61B7E /* GWJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158F81C21A8BF00F61B7E /* GWJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E79158FF1C21A8BF00F61B7E /* GWJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158FA1C21A8BF00F61B7E /* GWJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E7A0A4631C1EF900003662CA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A4621C1EF900003662CA /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		E7A0A4671C1EFB71003662CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A4651C1EFB70003662CA /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		E7A0A46E1C1EFE82003662CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A46D1C1EFE82003662CA /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		E7A0A46E1C1EFE82003662CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A46D1C1EFE82003662CA /* Assets.xcassets */; };
+		E7D6E0451C22ECF200F7C298 /* BaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6E0441C22ECF200F7C298 /* BaseInfo.m */; };
+		E7D6E0481C22ED1600F7C298 /* AdvertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6E0471C22ED1600F7C298 /* AdvertInfo.m */; };
+		E7D6E04B1C22ED2C00F7C298 /* ColumnInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6E04A1C22ED2C00F7C298 /* ColumnInfo.m */; };
+		E7D6E04E1C22ED4100F7C298 /* NewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6E04D1C22ED4100F7C298 /* NewsInfo.m */; };
+		E7D738991C27F2EF002EE70D /* GWNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D738981C27F2EF002EE70D /* GWNetworkOperation.m */; };
+		E7D7389C1C27F366002EE70D /* GWGetAdvert.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7389B1C27F366002EE70D /* GWGetAdvert.m */; };
+		E7D7389F1C27F382002EE70D /* GWGetColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D7389E1C27F382002EE70D /* GWGetColumn.m */; };
+		E7D738A21C27F397002EE70D /* GWGetNews.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D738A11C27F397002EE70D /* GWGetNews.m */; };
+		E7DBF51F1C353B6D00B84626 /* GWBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBF51E1C353B6D00B84626 /* GWBaseController.m */; };
+		E7DBF5251C353BF400B84626 /* AdvertPage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBF5241C353BF400B84626 /* AdvertPage.m */; };
+		E7DBF52A1C357F0200B84626 /* GWActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBF5271C357F0200B84626 /* GWActivity.m */; };
+		E7DBF52B1C357F0200B84626 /* GWActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBF5291C357F0200B84626 /* GWActivityIndicator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E7DBF5331C3597EE00B84626 /* AdvertPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7DBF5321C3597EE00B84626 /* AdvertPage.xib */; };
+		E7DBF5361C35CF3B00B84626 /* GWGetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBF5351C35CF3B00B84626 /* GWGetImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +75,35 @@
 		E79158FA1C21A8BF00F61B7E /* GWJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWJsonWriter.m; sourceTree = "<group>"; };
 		E7A0A4621C1EF900003662CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A0A4641C1EF927003662CA /* GwNews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GwNews-Prefix.pch"; sourceTree = "<group>"; };
-		E7A0A4661C1EFB70003662CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7A0A46D1C1EFE82003662CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Image/Assets.xcassets; sourceTree = "<group>"; };
+		E7D6E0431C22ECF200F7C298 /* BaseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInfo.h; sourceTree = "<group>"; };
+		E7D6E0441C22ECF200F7C298 /* BaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInfo.m; sourceTree = "<group>"; };
+		E7D6E0461C22ED1600F7C298 /* AdvertInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertInfo.h; sourceTree = "<group>"; };
+		E7D6E0471C22ED1600F7C298 /* AdvertInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertInfo.m; sourceTree = "<group>"; };
+		E7D6E0491C22ED2C00F7C298 /* ColumnInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnInfo.h; sourceTree = "<group>"; };
+		E7D6E04A1C22ED2C00F7C298 /* ColumnInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnInfo.m; sourceTree = "<group>"; };
+		E7D6E04C1C22ED4100F7C298 /* NewsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsInfo.h; sourceTree = "<group>"; };
+		E7D6E04D1C22ED4100F7C298 /* NewsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsInfo.m; sourceTree = "<group>"; };
+		E7D738961C27EBEB002EE70D /* URLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
+		E7D738971C27F2EF002EE70D /* GWNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWNetworkOperation.h; sourceTree = "<group>"; };
+		E7D738981C27F2EF002EE70D /* GWNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWNetworkOperation.m; sourceTree = "<group>"; };
+		E7D7389A1C27F366002EE70D /* GWGetAdvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGetAdvert.h; sourceTree = "<group>"; };
+		E7D7389B1C27F366002EE70D /* GWGetAdvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGetAdvert.m; sourceTree = "<group>"; };
+		E7D7389D1C27F382002EE70D /* GWGetColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGetColumn.h; sourceTree = "<group>"; };
+		E7D7389E1C27F382002EE70D /* GWGetColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGetColumn.m; sourceTree = "<group>"; };
+		E7D738A01C27F397002EE70D /* GWGetNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGetNews.h; sourceTree = "<group>"; };
+		E7D738A11C27F397002EE70D /* GWGetNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGetNews.m; sourceTree = "<group>"; };
+		E7DBF51D1C353B6D00B84626 /* GWBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWBaseController.h; sourceTree = "<group>"; };
+		E7DBF51E1C353B6D00B84626 /* GWBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWBaseController.m; sourceTree = "<group>"; };
+		E7DBF5231C353BF400B84626 /* AdvertPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertPage.h; sourceTree = "<group>"; };
+		E7DBF5241C353BF400B84626 /* AdvertPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertPage.m; sourceTree = "<group>"; };
+		E7DBF5261C357F0200B84626 /* GWActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWActivity.h; sourceTree = "<group>"; };
+		E7DBF5271C357F0200B84626 /* GWActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWActivity.m; sourceTree = "<group>"; };
+		E7DBF5281C357F0200B84626 /* GWActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWActivityIndicator.h; sourceTree = "<group>"; };
+		E7DBF5291C357F0200B84626 /* GWActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWActivityIndicator.m; sourceTree = "<group>"; };
+		E7DBF5321C3597EE00B84626 /* AdvertPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvertPage.xib; sourceTree = "<group>"; };
+		E7DBF5341C35CF3B00B84626 /* GWGetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGetImage.h; sourceTree = "<group>"; };
+		E7DBF5351C35CF3B00B84626 /* GWGetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGetImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +210,14 @@
 		E790933C1C16CEB9006A9023 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E7D6E0431C22ECF200F7C298 /* BaseInfo.h */,
+				E7D6E0441C22ECF200F7C298 /* BaseInfo.m */,
+				E7D6E0461C22ED1600F7C298 /* AdvertInfo.h */,
+				E7D6E0471C22ED1600F7C298 /* AdvertInfo.m */,
+				E7D6E0491C22ED2C00F7C298 /* ColumnInfo.h */,
+				E7D6E04A1C22ED2C00F7C298 /* ColumnInfo.m */,
+				E7D6E04C1C22ED4100F7C298 /* NewsInfo.h */,
+				E7D6E04D1C22ED4100F7C298 /* NewsInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				E790934D1C16D3B8006A9023 /* Defines.h */,
+				E7D738961C27EBEB002EE70D /* URLDefine.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -212,6 +260,10 @@
 		E79093411C16CF03006A9023 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				E7DBF5261C357F0200B84626 /* GWActivity.h */,
+				E7DBF5271C357F0200B84626 /* GWActivity.m */,
+				E7DBF5281C357F0200B84626 /* GWActivityIndicator.h */,
+				E7DBF5291C357F0200B84626 /* GWActivityIndicator.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -226,6 +278,8 @@
 		E79093431C16CF11006A9023 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E7DBF51D1C353B6D00B84626 /* GWBaseController.h */,
+				E7DBF51E1C353B6D00B84626 /* GWBaseController.m */,
 				E79093451C16CF9C006A9023 /* Page */,
 				E79093481C16CFB1006A9023 /* Widget */,
 				E79093471C16CFAC006A9023 /* Cell */,
@@ -236,6 +290,16 @@
 		E79093441C16CF19006A9023 /* Operation */ = {
 			isa = PBXGroup;
 			children = (
+				E7D738971C27F2EF002EE70D /* GWNetworkOperation.h */,
+				E7D738981C27F2EF002EE70D /* GWNetworkOperation.m */,
+				E7D7389A1C27F366002EE70D /* GWGetAdvert.h */,
+				E7D7389B1C27F366002EE70D /* GWGetAdvert.m */,
+				E7D7389D1C27F382002EE70D /* GWGetColumn.h */,
+				E7D7389E1C27F382002EE70D /* GWGetColumn.m */,
+				E7D738A01C27F397002EE70D /* GWGetNews.h */,
+				E7D738A11C27F397002EE70D /* GWGetNews.m */,
+				E7DBF5341C35CF3B00B84626 /* GWGetImage.h */,
+				E7DBF5351C35CF3B00B84626 /* GWGetImage.m */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -243,6 +307,8 @@
 		E79093451C16CF9C006A9023 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				E7DBF5231C353BF400B84626 /* AdvertPage.h */,
+				E7DBF5241C353BF400B84626 /* AdvertPage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -264,7 +330,7 @@
 		E79093491C16CFD9006A9023 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				E7A0A4651C1EFB70003662CA /* Main.storyboard */,
+				E7DBF5321C3597EE00B84626 /* AdvertPage.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -371,7 +437,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = guowei;
 				TargetAttributes = {
 					E79093031C16C347006A9023 = {
@@ -415,9 +481,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A0A4671C1EFB71003662CA /* Main.storyboard in Resources */,
+				E7DBF5331C3597EE00B84626 /* AdvertPage.xib in Resources */,
 				E7A0A46E1C1EFE82003662CA /* Assets.xcassets in Resources */,
-				E7A0A4631C1EF900003662CA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,9 +511,22 @@
 				E790930C1C16C347006A9023 /* AppDelegate.m in Sources */,
 				E79158FC1C21A8BF00F61B7E /* GWJsonBase.m in Sources */,
 				E79093091C16C347006A9023 /* main.m in Sources */,
+				E7DBF5361C35CF3B00B84626 /* GWGetImage.m in Sources */,
+				E7DBF52B1C357F0200B84626 /* GWActivityIndicator.m in Sources */,
+				E7D6E04E1C22ED4100F7C298 /* NewsInfo.m in Sources */,
+				E7DBF52A1C357F0200B84626 /* GWActivity.m in Sources */,
+				E7D6E0451C22ECF200F7C298 /* BaseInfo.m in Sources */,
+				E7D6E0481C22ED1600F7C298 /* AdvertInfo.m in Sources */,
+				E7D7389C1C27F366002EE70D /* GWGetAdvert.m in Sources */,
+				E7D7389F1C27F382002EE70D /* GWGetColumn.m in Sources */,
+				E7D738A21C27F397002EE70D /* GWGetNews.m in Sources */,
+				E7DBF51F1C353B6D00B84626 /* GWBaseController.m in Sources */,
 				E79158FE1C21A8BF00F61B7E /* GWJsonUtility.m in Sources */,
 				E79158FF1C21A8BF00F61B7E /* GWJsonWriter.m in Sources */,
 				E79158FD1C21A8BF00F61B7E /* GWJsonParser.m in Sources */,
+				E7D6E04B1C22ED2C00F7C298 /* ColumnInfo.m in Sources */,
+				E7DBF5251C353BF400B84626 /* AdvertPage.m in Sources */,
+				E7D738991C27F2EF002EE70D /* GWNetworkOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,18 +560,6 @@
 			targetProxy = E79093291C16C348006A9023 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E7A0A4651C1EFB70003662CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7A0A4661C1EFB70003662CA /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E72781551C1D4DE200BDE5E5 /* AdHoc */ = {
@@ -548,11 +614,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchAsset;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "GWNews/Supporting Files/GwNews-Prefix.pch";
 				INFOPLIST_FILE = GWNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guowei.GWNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GWNews-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -634,11 +703,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchAsset;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "GWNews/Supporting Files/GwNews-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
 				INFOPLIST_FILE = GWNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guowei.GWNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GWNews-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -720,11 +793,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchAsset;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "GWNews/Supporting Files/GwNews-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "OFFICIAL=1";
 				INFOPLIST_FILE = GWNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guowei.GWNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GWNews-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -846,11 +923,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchAsset;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "GWNews/Supporting Files/GwNews-Prefix.pch";
 				INFOPLIST_FILE = GWNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guowei.GWNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GWNews-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -862,11 +942,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchAsset;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "GWNews/Supporting Files/GwNews-Prefix.pch";
 				INFOPLIST_FILE = GWNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guowei.GWNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GWNews-Bridging-Header.h";
 			};
 			name = Release;

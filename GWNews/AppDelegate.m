@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AdvertPage.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,19 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)appDeg
+{
+    return  (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    //入口控制器为nib名称为LoginPage的视图控制器
+//    self.window.rootViewController = [[AdvertPage alloc] initWithNibName:@"LoginPage" bundle:nil];
+//    [self.window makeKeyAndVisible];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [AdvertPage showAdvertPage];
     return YES;
 }
 

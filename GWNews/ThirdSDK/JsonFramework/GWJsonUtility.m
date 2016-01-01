@@ -11,7 +11,7 @@
 #import "GWJsonParser.h"
 
 @implementation GWJsonUtility
-
+//从Json格式字符串中解析对象，如Dictionary,Array
 + (id)jsonValueFromString:(NSString *)jsonString
 {
     GWJsonParser *jsonParser = [GWJsonParser new];
@@ -21,11 +21,11 @@
         BASE_INFO_FUN(@"不是合法的JSON格式");
         BASE_INFO_FUN(jsonString);
     }
-    
+
     [jsonParser release];
     return repr;
 }
-
+//将对象转为Json格式字符串
 + (NSString *)jsonValueFromObject:(id)object
 {
     GWJsonWriter *jsonWriter = [GWJsonWriter new]; 

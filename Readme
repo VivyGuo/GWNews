@@ -27,6 +27,21 @@ Target->General,Launch Image Source选择启动图片资源
 5.加入JSON library
 Target->Building Phases ->CompileSources->JSON库文件设置维不使用ARC -fno-objc-arc
 
+6.Model:BaseInfo,AdvertInfo,ColumnInfo,NewsInfo
+7.URLDefine.h
+
+8.Operation:
+1）GWNetworkOperation:网络请求操作基类
+2）GWGetAdvert:请求广告信息
+3）GWGetImage:请求广告图片
+9.View
+1）AdvertPage广告页：请求广告信息，显示广告
+
+
+
+
+
+
 
 
 
