@@ -13,7 +13,7 @@
  URL请求后处理回调操作;
  显示/隐藏提示框;
  */
-@interface GWBaseController : UIViewController<GWNetworkOperationDelegate>{
+@interface GWBaseViewController : UIViewController<GWNetworkOperationDelegate>{
     GWNetworkOperation      *_operation;
 }
 - (void)showIndicator:(NSString *)tipMessage

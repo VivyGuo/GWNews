@@ -6,15 +6,15 @@
 //  Copyright © 2015年 guowei. All rights reserved.
 //
 
-#import "GWBaseController.h"
+#import "GWBaseViewController.h"
 #import "GWActivityIndicator.h"
 
-@interface GWBaseController (){
+@interface GWBaseViewController (){
     GWActivity      *_activity;
 }
 @end
 
-@implementation GWBaseController
+@implementation GWBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,16 +28,10 @@
     _operation = nil;
 }
 #pragma mark - GWNetworkOperationDelegate methods
-//- (void)opSuccess:(id)data{
-//    [self hideIndicator];
-//}
-//- (void)opFail:(NSString *)errorMessage{
-//    BASE_ERROR_FUN(errorMessage);
-//    [self showIndicator:@"请求错误" autoHide:YES afterDelay:YES];
-//}
 
 - (void)operation:(GWNetworkOperation *)operation successWithData:(id)data{
     [self hideIndicator];
+    
 }
 
 - (void)operation:(GWNetworkOperation *)operation failWithErrorMessage:(NSString *)message{

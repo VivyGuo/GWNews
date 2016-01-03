@@ -10,7 +10,6 @@
 
 @interface AdvertInfo : BaseInfo
 
-@property(nonatomic,strong) NSString *imageUrl;
-@property(nonatomic,strong) NSString *linkUrl;
+@property(nonatomic,copy) NSString *imageUrl;
 
 @end

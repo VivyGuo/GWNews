@@ -76,12 +76,10 @@
 }
 //实现代理(delegate)的类完成具体操作
 - (void)parseSuccessData:(NSData *)data{
-//    [_delegate opSuccess:data];
     [_delegate operation:self successWithData:data];
 }
 
 - (void)parseFailData:(NSString *)error{
-//    [_delegate opFail:error];
     [_delegate operation:self failWithErrorMessage:error];
 }
 
@@ -100,8 +98,6 @@
 //发送请求，收到数据后，赋值receiveData
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
         BASE_INFO_FUN(([NSString stringWithFormat:@"Data length:%lu", (unsigned long)data.length]));
-//        BASE_INFO_FUN(([NSString stringWithFormat:@"ScreenHeight:%f",ScreenHeight]));
-//        BASE_INFO_FUN(([NSString stringWithFormat:@"ScreenWidth:%f",ScreenWidth]));
     
         [_receiveData appendData:data];
 }
@@ -109,18 +105,17 @@
 //请求结束，处理数据
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     NSString *receiveDataStr = [[NSString alloc] initWithData:_receiveData encoding:NSUTF8StringEncoding];
-//    BASE_INFO_FUN(receiveDataStr);
-    
     // 成功接受：200有数据，204没有数据，206断点续传
-    if (_statusCode == 200 || _statusCode == 204 || _statusCode == 206) {
-        [self parseSuccessData:_receiveData];
-    }else {
+//    if (_statusCode == 200 || _statusCode == 204 || _statusCode == 206) {
+//        [self parseSuccessData:_receiveData];
+//    }else {
         if (_receiveData.length <= 0) {
-            receiveDataStr = [[NSString alloc] initWithFormat:@"ResponseCode:%ld", (long)_statusCode];
+            BASE_ERROR_FUN(receiveDataStr);
+            [self parseFailData:@"no data"];
+        }else{
+            [self parseSuccessData:_receiveData];
         }
-        
-        [self parseFailData:receiveDataStr];
-    }
+//    }
     _connection = nil;
     _receiveData = nil;
 }

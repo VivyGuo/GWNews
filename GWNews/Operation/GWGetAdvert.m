@@ -17,7 +17,6 @@
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSMutableDictionary *dict = [GWJsonUtility jsonValueFromString:jsonString];
     AdvertInfo *advertInfo = [AdvertInfo infoFromDict:dict];
-//    [_delegate opSuccess:advertInfo.imageUrl];
     [_delegate operation:self successWithData:advertInfo.imageUrl];
 }
 

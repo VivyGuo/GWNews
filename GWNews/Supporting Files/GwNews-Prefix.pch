@@ -15,5 +15,7 @@
 #import "Defines.h"
 #import "URLDefine.h"
 #import "GWJsonUtility.h"
+#import "GWGlobal.h"
+#import "GWFileUtility.h"
 
 #endif

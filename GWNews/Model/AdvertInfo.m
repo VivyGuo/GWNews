@@ -15,14 +15,8 @@
     NSDictionary *advertDic = [dict objectForKey:@"ads"][0];
     
     AdvertInfo *info = [[AdvertInfo alloc] init];
-//    info.ID = [dict objectForKey:@"id"];
-//    info.name = [dict objectForKey:@"name"];
-//    info.imageUrl = [dict objectForKey:@"imageurl"];
-//    info.linkUrl = [dict objectForKey:@"linkurl"];
-    
     info.ID = [advertDic objectForKey:@"id"];
     info.imageUrl = [advertDic objectForKey:@"res_url"][0];
-    //    advert.linkUrl = [[advertDic objectForKey:@"actions_params"] objectForKey:@"link_url"];
     return info;
 }
 @end

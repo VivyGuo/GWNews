@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface BaseInfo : NSObject
-@property(nonatomic,strong) NSString *ID;
-@property(nonatomic,strong) NSString *name;
+@property(nonatomic,copy) NSString *ID;
+@property(nonatomic,copy) NSString *name;
 
 + (instancetype)infoFromDict:(NSDictionary *)dict;
 + (NSArray *)infosFromDict:(NSDictionary *)dict;

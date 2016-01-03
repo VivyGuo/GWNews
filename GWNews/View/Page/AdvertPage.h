@@ -6,9 +6,9 @@
 //  Copyright © 2015年 guowei. All rights reserved.
 //
 
-#import "GWBaseController.h"
+#import "GWBaseViewController.h"
 
-@interface AdvertPage : GWBaseController{
+@interface AdvertPage : GWBaseViewController{
    IBOutlet UIImageView    *_imageView; 
 }
 

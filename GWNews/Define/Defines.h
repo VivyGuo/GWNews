@@ -48,9 +48,27 @@
 #define IsiPhone6s  (IsiPhone && ScreenMaxLength == 736.0)
 
 
-//提示框显示时间
-#define AnimationSecond     1.0
+// 文件缓存路径
+#define RootPath            @"/Library/.GWNews"
+#define CacheImagePath      @"CacheImages"
+#define NewsIconPrex        @"GWNewsIcon_%@"
+#define NewsDBFile          @"GWNews.db"
 
+//广告常量
+#define AdvertKey           @"AdvertKey"
+#define AdvertCheckTime     60*60
+#define AdvertDelayTime     3
+
+// iOS系统版本
+#define IOSBaseVersion8     8.0
+#define IOSBaseVersion7     7.0
+#define IOSBaseVersion6     6.0
+
+// 其他常量
+#define AnimationSecond     1.0
+#define NavBarHeight        44
+#define NavBarHeight7       64
+#define LocationDistance    100
 
 
 

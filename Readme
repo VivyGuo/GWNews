@@ -29,13 +29,26 @@ Target->Building Phases ->CompileSources->JSON库文件设置维不使用ARC -fn
 
 6.Model:BaseInfo,AdvertInfo,ColumnInfo,NewsInfo
 7.URLDefine.h
-
 8.Operation:
 1）GWNetworkOperation:网络请求操作基类
 2）GWGetAdvert:请求广告信息
 3）GWGetImage:请求广告图片
 9.View
 1）AdvertPage广告页：请求广告信息，显示广告
+
+修改了广告模型类AdvertInfo
+网络请求改为从http获取，而非本地服务器Json文件
+
+10.增加文件缓存路径常量、广告常量、iOS系统版本常量
+增加工具类：格式化日期类，格式化字符串类，文件操作类，系统配置
+
+11.新建导航栏基类 GWBaseNavPage ，设置导航栏背景样式、按钮样式、Title样式
+新建新闻页面(NewsPage)，视听、阅读等页面继承导航栏基类
+
+12.新建主界面HomeTabBarController
+从plist文件读取Page数组，生成相应PageViewController 添加到TabBar
+
+增加了AdvertPage获取广告失败处理操作：直接显示主页
 
 
 
