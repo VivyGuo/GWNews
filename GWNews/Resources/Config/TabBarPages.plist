@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>className</key>
+		<string>NewsPage</string>
+		<key>title</key>
+		<string>新闻</string>
+		<key>image</key>
+		<string>NewsIcon.png</string>
+		<key>selectImage</key>
+		<string>NewsIconSelect.png</string>
+		<key>load</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>ReaderPage</string>
+		<key>title</key>
+		<string>阅读</string>
+		<key>image</key>
+		<string>ReaderIcon.png</string>
+		<key>selectImage</key>
+		<string>ReaderIconSelect.png</string>
+		<key>load</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>VoicePage</string>
+		<key>title</key>
+		<string>视听</string>
+		<key>image</key>
+		<string>VoiceIcon.png</string>
+		<key>selectImage</key>
+		<string>VoiceIconSelect.png</string>
+		<key>load</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>DiscoveryPage</string>
+		<key>title</key>
+		<string>发现</string>
+		<key>image</key>
+		<string>DiscoveryIcon.png</string>
+		<key>selectImage</key>
+		<string>DiscoveryIconSelect.png</string>
+		<key>load</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>MyPage</string>
+		<key>title</key>
+		<string>我</string>
+		<key>image</key>
+		<string>MyIcon.png</string>
+		<key>selectImage</key>
+		<string>MyIconSelect.png</string>
+		<key>load</key>
+		<true/>
+	</dict>
+</array>
+</plist>
