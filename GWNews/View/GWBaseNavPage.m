@@ -35,6 +35,8 @@
     NSString *imageName = [self.barBackgroudImage stringByAppendingFormat:@"%d.png", [GWGlobal isSystemLowIOS7]?NavBarHeight:NavBarHeight7];
     UIImage *image = [UIImage imageNamed:imageName];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     
     NSDictionary *attribute = @{

@@ -49,6 +49,9 @@ Target->Building Phases ->CompileSources->JSON库文件设置维不使用ARC -fn
 从plist文件读取Page数组，生成相应PageViewController 添加到TabBar
 
 增加了AdvertPage获取广告失败处理操作：直接显示主页
+GWNetworkOperation中出现data无法通过UTF8编码转换为string，改为ASCII编码
+
+
 
 
 

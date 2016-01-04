@@ -7,7 +7,10 @@
 //
 
 #import "GWBaseNavPage.h"
-
-@interface NewsPage : GWBaseNavPage
+#import "ColumnBarWidget.h"
+@interface NewsPage : GWBaseNavPage<ColumnBarDelegate>{
+    IBOutlet UIView     *_columnBarView;
+    ColumnBarWidget     *_columnBarWidget;
+}
 
 @end

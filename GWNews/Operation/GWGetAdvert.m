@@ -13,8 +13,9 @@
 
 
 - (void)parseSuccessData:(NSData *)data{
-    
-    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    //NSUTF8StringEncoding会出现data转换为空的情况,NSASCIIStringEncoding
+    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+
     NSMutableDictionary *dict = [GWJsonUtility jsonValueFromString:jsonString];
     AdvertInfo *advertInfo = [AdvertInfo infoFromDict:dict];
     [_delegate operation:self successWithData:advertInfo.imageUrl];

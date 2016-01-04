@@ -7,9 +7,7 @@
 
 @implementation GWButtonHelper
 
-- (void)setButton:(UIButton *)btn
-      normalColor:(UIColor *)nColor
-    selectedColor:(UIColor *)sColor
+- (void)setButton:(UIButton *)btn normalColor:(UIColor *)nColor selectedColor:(UIColor *)sColor
 {
     [self setSelected:NO];
     

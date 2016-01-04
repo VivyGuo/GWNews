@@ -28,6 +28,9 @@
 //TabBarController添加子项
 - (void)addViewControllers{
     self.tabBar.tintColor = [UIColor redColor];
+    //[UIColor colorWithRed:183/255.0 green:20/255.0 blue:28/255.0 alpha:1];
+    //[UIColor colorWithRed:149/255.0 green:149/255.0 blue:149/255.0 alpha:1];
+
     self.viewControllers = [PageInfo getPageViewControllerArray];
 }
 

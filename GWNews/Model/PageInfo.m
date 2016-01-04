@@ -44,11 +44,17 @@
     UINavigationController *navigationPage = nil;
     
     for (PageInfo *pageInfo in pageInfoArray) {
+        //如果该页不显示，跳过本轮，继续下一轮for
+        if (!pageInfo.load) {
+                continue;
+        }
+        
         //创建相应页面的ViewController，设置ViewController的title,image
         pageViewController = [[NSClassFromString(pageInfo.ID) alloc] init ];
         pageViewController.title = pageInfo.name;
         pageViewController.tabBarItem.image = [UIImage imageNamed:pageInfo.image];
-        
+        pageViewController.tabBarItem.selectedImage = [UIImage imageNamed:pageInfo.selectImage];
+   
         navigationPage = [[UINavigationController alloc] initWithRootViewController:pageViewController];
         [pageViewControllerArray addObject:navigationPage];
     }

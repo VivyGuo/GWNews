@@ -35,7 +35,6 @@
     }
     _connection = nil;
     _delegate = nil;
-    _receiveData = nil;
 }
 
 /*
@@ -104,20 +103,26 @@
 
 //请求结束，处理数据
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    NSString *receiveDataStr = [[NSString alloc] initWithData:_receiveData encoding:NSUTF8StringEncoding];
-    if (_receiveData.length <= 0) {
-        BASE_INFO_FUN(receiveDataStr);
+    //NSUTF8StringEncoding编码会发生无法解析data数据情况，改为ASCII解析，并加入字符串为空判断
+    NSString *receiveDataStr = [[NSString alloc] initWithData:_receiveData encoding:NSASCIIStringEncoding];
+//    BASE_INFO_FUN(receiveDataStr);
+    
+    if (_receiveData.length <= 0 || (receiveDataStr == nil)) {
         [self parseFailData:@"no data"];
     }else{
         [self parseSuccessData:_receiveData];
     }
     // 200有数据，204没有数据，206断点续传
 //    if (_statusCode == 200 || _statusCode == 204 || _statusCode == 206) {
-//        [self parseSuccessData:_receiveData];
+//            [self parseSuccessData:_receiveData];
 //    }else {
+//        if (_receiveData.length <= 0) {
+//           [self parseFailData:@"no data"];
+//        }
+//        
 //    }
-//    _connection = nil;
-//    _receiveData = nil;
+    _connection = nil;
+    _receiveData = nil;
 }
 //请求失败处理
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{

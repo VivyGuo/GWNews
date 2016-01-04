@@ -76,7 +76,6 @@
 + (NSString *)getRootPath
 {
     NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:RootPath];
-//    [GWFileUtility createPath:path];
     BASE_INFO_FUN(NSHomeDirectory());//沙盒目录
     return path;
 }
@@ -84,7 +83,7 @@
 + (NSString *)getCacheImage:(NSString *)fileName
 {
     NSString *path = [NSString stringWithFormat:@"%@/%@", [GWGlobal getRootPath], CacheImagePath];
-    //    [GWFileUtility createPath:path];//创建目录
+    [GWFileUtility createPath:path];//创建目录
     path = [NSString stringWithFormat:@"%@/%@.jpg", path, fileName];
     
     return path;

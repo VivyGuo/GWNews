@@ -54,6 +54,11 @@
 		E79158FE1C21A8BF00F61B7E /* GWJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158F81C21A8BF00F61B7E /* GWJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E79158FF1C21A8BF00F61B7E /* GWJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158FA1C21A8BF00F61B7E /* GWJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E7A0A46E1C1EFE82003662CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A46D1C1EFE82003662CA /* Assets.xcassets */; };
+		E7CC338F1C3A77F000A027E0 /* NewsColumn.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7CC338E1C3A77F000A027E0 /* NewsColumn.plist */; };
+		E7CC33911C3AB07400A027E0 /* NewsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7CC33901C3AB07400A027E0 /* NewsPage.xib */; };
+		E7CC33931C3AB09400A027E0 /* ColumnBarWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7CC33921C3AB09400A027E0 /* ColumnBarWidget.xib */; };
+		E7CC33961C3AD10400A027E0 /* GWBaseWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CC33951C3AD10400A027E0 /* GWBaseWidget.m */; };
+		E7CC33991C3AD12F00A027E0 /* ColumnBarWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CC33981C3AD12F00A027E0 /* ColumnBarWidget.m */; };
 		E7D6E0451C22ECF200F7C298 /* BaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6E0441C22ECF200F7C298 /* BaseInfo.m */; };
 		E7D6E0481C22ED1600F7C298 /* AdvertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6E0471C22ED1600F7C298 /* AdvertInfo.m */; };
 		E7D6E04B1C22ED2C00F7C298 /* ColumnInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6E04A1C22ED2C00F7C298 /* ColumnInfo.m */; };
@@ -167,6 +172,13 @@
 		E7A0A4621C1EF900003662CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A0A4641C1EF927003662CA /* GwNews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GwNews-Prefix.pch"; sourceTree = "<group>"; };
 		E7A0A46D1C1EFE82003662CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Image/Assets.xcassets; sourceTree = "<group>"; };
+		E7CC338E1C3A77F000A027E0 /* NewsColumn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NewsColumn.plist; sourceTree = "<group>"; };
+		E7CC33901C3AB07400A027E0 /* NewsPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsPage.xib; sourceTree = "<group>"; };
+		E7CC33921C3AB09400A027E0 /* ColumnBarWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColumnBarWidget.xib; sourceTree = "<group>"; };
+		E7CC33941C3AD10400A027E0 /* GWBaseWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWBaseWidget.h; sourceTree = "<group>"; };
+		E7CC33951C3AD10400A027E0 /* GWBaseWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWBaseWidget.m; sourceTree = "<group>"; };
+		E7CC33971C3AD12F00A027E0 /* ColumnBarWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnBarWidget.h; sourceTree = "<group>"; };
+		E7CC33981C3AD12F00A027E0 /* ColumnBarWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnBarWidget.m; sourceTree = "<group>"; };
 		E7D6E0431C22ECF200F7C298 /* BaseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInfo.h; sourceTree = "<group>"; };
 		E7D6E0441C22ECF200F7C298 /* BaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInfo.m; sourceTree = "<group>"; };
 		E7D6E0461C22ED1600F7C298 /* AdvertInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertInfo.h; sourceTree = "<group>"; };
@@ -483,6 +495,10 @@
 		E79093481C16CFB1006A9023 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				E7CC33941C3AD10400A027E0 /* GWBaseWidget.h */,
+				E7CC33951C3AD10400A027E0 /* GWBaseWidget.m */,
+				E7CC33971C3AD12F00A027E0 /* ColumnBarWidget.h */,
+				E7CC33981C3AD12F00A027E0 /* ColumnBarWidget.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -491,6 +507,8 @@
 			isa = PBXGroup;
 			children = (
 				E7DBF5321C3597EE00B84626 /* AdvertPage.xib */,
+				E7CC33901C3AB07400A027E0 /* NewsPage.xib */,
+				E7CC33921C3AB09400A027E0 /* ColumnBarWidget.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -509,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				E78271911C39971100A59D6B /* TabBarPages.plist */,
+				E7CC338E1C3A77F000A027E0 /* NewsColumn.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -646,11 +665,13 @@
 			files = (
 				E78271A11C39979D00A59D6B /* NewsIcon@2x.png in Resources */,
 				E78271861C39903600A59D6B /* NavigationBarRed44@2x.png in Resources */,
+				E7CC338F1C3A77F000A027E0 /* NewsColumn.plist in Resources */,
 				E78271851C39903600A59D6B /* NavigationBackBlack@2x.png in Resources */,
 				E78271821C39903600A59D6B /* NavigationBarWhite44@2x.png in Resources */,
 				E78271A21C39979D00A59D6B /* NewsIconSelect@2x.png in Resources */,
 				E78271841C39903600A59D6B /* NavigationBackWhite@2x.png in Resources */,
 				E78271811C39903600A59D6B /* NavigationBarIcon@2x.png in Resources */,
+				E7CC33931C3AB09400A027E0 /* ColumnBarWidget.xib in Resources */,
 				E782719F1C39979D00A59D6B /* MyIcon@2x.png in Resources */,
 				E782719D1C39979D00A59D6B /* DiscoveryIcon@2x.png in Resources */,
 				E78271891C39903600A59D6B /* NavigationSquare@2x.png in Resources */,
@@ -666,6 +687,7 @@
 				E782719E1C39979D00A59D6B /* DiscoveryIconSelect@2x.png in Resources */,
 				E78271881C39903600A59D6B /* NavigationBell@2x.png in Resources */,
 				E78271A01C39979D00A59D6B /* MyIconSelect@2x.png in Resources */,
+				E7CC33911C3AB07400A027E0 /* NewsPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,12 +716,14 @@
 				E724A0F21C381EA6007154C8 /* MyPage.m in Sources */,
 				E790930C1C16C347006A9023 /* AppDelegate.m in Sources */,
 				E79158FC1C21A8BF00F61B7E /* GWJsonBase.m in Sources */,
+				E7CC33991C3AD12F00A027E0 /* ColumnBarWidget.m in Sources */,
 				E79093091C16C347006A9023 /* main.m in Sources */,
 				E7DBF5361C35CF3B00B84626 /* GWGetImage.m in Sources */,
 				E78271611C39068F00A59D6B /* HomeTabBarController.m in Sources */,
 				E77F90121C36BDC300FAF680 /* GWAppSetting.m in Sources */,
 				E7DBF52B1C357F0200B84626 /* GWActivityIndicator.m in Sources */,
 				E7D6E04E1C22ED4100F7C298 /* NewsInfo.m in Sources */,
+				E7CC33961C3AD10400A027E0 /* GWBaseWidget.m in Sources */,
 				E724A0EF1C381E9D007154C8 /* VoicePage.m in Sources */,
 				E724A0F51C381EB0007154C8 /* DiscoveryPage.m in Sources */,
 				E7DBF52A1C357F0200B84626 /* GWActivity.m in Sources */,
