@@ -99,7 +99,6 @@
 //发送请求，收到数据后，赋值receiveData
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
         BASE_INFO_FUN(([NSString stringWithFormat:@"Data length:%lu", (unsigned long)data.length]));
-    
         [_receiveData appendData:data];
 }
 
@@ -112,7 +111,7 @@
     }else{
         [self parseSuccessData:_receiveData];
     }
-    // 成功接受：200有数据，204没有数据，206断点续传
+    // 200有数据，204没有数据，206断点续传
 //    if (_statusCode == 200 || _statusCode == 204 || _statusCode == 206) {
 //        [self parseSuccessData:_receiveData];
 //    }else {
