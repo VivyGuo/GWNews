@@ -60,7 +60,7 @@
 		<key>selectImage</key>
 		<string>MyIconSelect.png</string>
 		<key>load</key>
-		<true/>
+		<false/>
 	</dict>
 </array>
 </plist>

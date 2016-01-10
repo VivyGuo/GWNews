@@ -14,7 +14,6 @@
     ColumnInfo *info = [[ColumnInfo alloc] init];
     info.name = [dict objectForKey:@"title"];
     info.urlString = [dict objectForKey:@"urlString"];
-    info.replyUrl = [dict objectForKey:@"replyUrl"];
     return info;
 }
 
@@ -23,12 +22,13 @@
     NSString *configFile = [[NSBundle mainBundle] pathForResource:@"NewsColumn" ofType:@"plist"];
     NSArray  *columConfigs = [NSArray arrayWithContentsOfFile:configFile];
     NSMutableArray *columnInfoArray = [[NSMutableArray alloc] init];
-    
+    ColumnInfo *columnItem = nil;
     if (columConfigs.count <= 0) {
         BASE_ERROR_FUN(@"NewsColumn.plist无数据");
     }
     for (NSDictionary *columnDict in columConfigs) {
-        [columnInfoArray addObject:[ColumnInfo infoFromDict:columnDict]];
+        columnItem = [ColumnInfo infoFromDict:columnDict];
+        [columnInfoArray addObject:columnItem];
     }
     
     return columnInfoArray;

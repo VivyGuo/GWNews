@@ -18,16 +18,13 @@
 #if ProductType == 0
 #define BaseURL    @"http://c.m.163.com/"
 #else
-#define BaseURL    @"http://127.0.0.1/GWNews/"
+#define BaseURL    @"http://c.m.163.com/" //"http://127.0.0.1/GWNews/"
 #endif
 
 #define GWRequestTimeout    10
 //服务器数据接口
-#define LoginURL    BaseURL "login.json"
-#define AdvertURL   BaseURL"/advert.json?width=%ld&height=%ld"
-#define ColumnURL   BaseURL "column.json"
-#define NewsURLFmt  BaseURL "news_%@.json"
-#define DetailURLFmt "http://c.m.163.com/nc/article/%@/full.html"
+#define NewsURL     BaseURL "nc/article/%@/0-20.html"
+#define DetailURL   BaseURL "nc/article/%@/full.html"
 #define ChartURL    BaseURL "chart.json"
 #define H5URL       BaseURL "H5/content.html"
 

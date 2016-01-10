@@ -15,5 +15,5 @@
 @property(nonatomic,copy) NSString      *selectImage;
 @property(nonatomic,assign) BOOL        load;
 
-+ (NSArray *)getPageViewControllerArray;
++ (NSArray *)getPageInfos;
 @end

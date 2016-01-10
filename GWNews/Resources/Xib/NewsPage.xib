@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsPage">
+            <connections>
+                <outlet property="_columnBarView" destination="HBU-F2-q8A" id="2pe-Rk-QHv"/>
+                <outlet property="_landscapeTableView" destination="2Hs-fZ-gpb" id="5RL-7x-XEy"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xS1-4z-V4V"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-F2-q8A" userLabel="columnBarView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ColumnBarRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-OO-vEv">
+                            <rect key="frame" x="275" y="0.0" width="45" height="40"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="nHF-OO-vEv" secondAttribute="trailing" id="3DF-Kh-WUF"/>
+                        <constraint firstAttribute="height" constant="40" id="drO-OG-Znx"/>
+                        <constraint firstItem="nHF-OO-vEv" firstAttribute="top" secondItem="HBU-F2-q8A" secondAttribute="top" id="jNw-8L-Onl"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColumnBarLeft.png" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-3L-Ioy">
+                    <rect key="frame" x="0.0" y="0.0" width="45" height="40"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hs-fZ-gpb" customClass="GWLandscapeTableView">
+                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Sn8-d6-Hqh"/>
+                        <outlet property="delegate" destination="-1" id="NCQ-Sc-SGt"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2Hs-fZ-gpb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1hJ-GP-rlV"/>
+                <constraint firstItem="4DD-3L-Ioy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HyQ-Ps-694"/>
+                <constraint firstAttribute="trailing" secondItem="HBU-F2-q8A" secondAttribute="trailing" id="Jjr-22-fXy"/>
+                <constraint firstAttribute="bottom" secondItem="2Hs-fZ-gpb" secondAttribute="bottom" id="LvD-aX-fJl"/>
+                <constraint firstItem="HBU-F2-q8A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N2J-2l-4tJ"/>
+                <constraint firstAttribute="trailing" secondItem="2Hs-fZ-gpb" secondAttribute="trailing" id="kjS-cs-qUP"/>
+                <constraint firstItem="HBU-F2-q8A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="p8d-6O-TNE"/>
+                <constraint firstItem="4DD-3L-Ioy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q5R-1a-Prx"/>
+                <constraint firstItem="2Hs-fZ-gpb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="tzb-ni-TD0"/>
+                <constraint firstItem="2Hs-fZ-gpb" firstAttribute="top" secondItem="4DD-3L-Ioy" secondAttribute="bottom" id="z8f-a9-67h"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="278" y="364"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ColumnBarLeft.png" width="45" height="36"/>
+        <image name="ColumnBarRight.png" width="45" height="36"/>
+    </resources>
+</document>

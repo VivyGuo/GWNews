@@ -10,6 +10,4 @@
 
 @interface GWBaseWidget : GWBaseViewController
 
-@property(nonatomic,strong) NSMutableArray   *listData;
-
 @end

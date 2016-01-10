@@ -51,6 +51,15 @@ Target->Building Phases ->CompileSources->JSON库文件设置维不使用ARC -fn
 增加了AdvertPage获取广告失败处理操作：直接显示主页
 GWNetworkOperation中出现data无法通过UTF8编码转换为string，改为ASCII编码
 
+13.新闻页增加栏目条
+ColumnBarWidget由UIButton和UIScrollView组成
+
+从plist中读取栏目数量、title等信息生成UIButton
+
+14.新闻页
+
+新闻页由自定义横向TableView组成(GWLandscapTableView),每个Cell(GWLandscapCell)由NewsWidget组成
+NewsWidget由竖向TableView组成，每个Cell(NewsTableViewCell)组成
 
 
 

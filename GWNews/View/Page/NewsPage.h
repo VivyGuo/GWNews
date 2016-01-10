@@ -8,9 +8,12 @@
 
 #import "GWBaseNavPage.h"
 #import "ColumnBarWidget.h"
+@class ColumnBarWidget;
+@class  GWLandscapeTableView;
 @interface NewsPage : GWBaseNavPage<ColumnBarDelegate>{
-    IBOutlet UIView     *_columnBarView;
-    ColumnBarWidget     *_columnBarWidget;
+    IBOutlet UIView         *_columnBarView;
+    ColumnBarWidget         *_columnBarWidget;
+    IBOutlet GWLandscapeTableView    *_landscapeTableView;
 }
 
 @end

@@ -10,8 +10,7 @@
 #import "AdvertInfo.h"
 
 @implementation GWGetAdvert
-
-
+//将广告数据解析到Model层AdvertInfo 
 - (void)parseSuccessData:(NSData *)data{
     //NSUTF8StringEncoding会出现data转换为空的情况,NSASCIIStringEncoding
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];

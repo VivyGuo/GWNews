@@ -8,6 +8,10 @@
 //
 
 #import "NewsPage.h"
+#import "GWLandscapeTableView.h"
+#import "GWLandscapeCell.h"
+#import "NewsInfo.h"
+#import "ColumnInfo.h"
 
 @interface NewsPage ()
 
@@ -20,7 +24,7 @@
     //设置导航栏图标
     [self setNavTitleWithImage:@"NavigationBarIcon.png"];
     [self setNavLeftBarButtonItemWithImage:@"NavigationBell.png" selector:nil];
-    [self setNavRightBarButtonItemWithImage:@"NavigationSquare.png" selector:@selector(showWeatherPage:)];
+    [self setNavRightBarButtonItemWithImage:@"NavigationSquare.png" selector:nil];
 }
 
 //添加栏目
@@ -37,22 +41,45 @@
     _columnBarWidget.delegate = self;
     _columnBarWidget.view.frame = _columnBarView.bounds;
     [_columnBarView addSubview:_columnBarWidget.view];
-    //将columnBarWidget返回视图层次的最后，便于显示阴影图片视图（此处没有）
-//    [_columnBarView sendSubviewToBack:_columnBarWidget.view];
+    //将columnBarWidget返回视图层次的最后，便于显示阴影图片视图
+    [_columnBarView sendSubviewToBack:_columnBarWidget.view];
 }
 //选中某栏目后回调操作
 - (void)didSelect:(NSInteger)coulumnIndex{
+    if (_landscapeTableView.currentCellIndex != coulumnIndex) {
+        _landscapeTableView.currentCellIndex = coulumnIndex;
+        [_landscapeTableView reloadData];
+    }
+}
+//添加landscapTableView
+#pragma mark - FxLandscapeViewDataSource & FxLandscapeViewDelegate methods
+
+- (NSInteger)numberOfCellsInTableView:(GWLandscapeTableView *)tableView
+{
+    return _columnBarWidget.listData.count;
+}
+
+- (GWLandscapeCell *)cellInTableView:(GWLandscapeTableView *)tableView atIndex:(NSInteger)index
+{
     
+    GWLandscapeCell *cell = (GWLandscapeCell *)[tableView dequeueReusableCell];
+    if (cell == nil) {
+        cell = [[GWLandscapeCell alloc] initWithFrame:_landscapeTableView.bounds];
+        cell.owner = self;
+    }
+    //GWLandscapeCell包含一个竖向NewsTableView,根据栏目id添加相应的NewsTableView
+    ColumnInfo *info = [_columnBarWidget.listData objectAtIndex:index];
+    //NewsWidget根据栏目的urlString加载网络数据
+    //NSString stringWithFormat:@"http://c.m.163.com/nc/article/%@/0-20.html",columnInfo.urlString
+    [cell setCellData:info.urlString];
+    
+    return cell;
 }
 
-
-
-
-
-- (void)showWeatherPage:(id)sender{}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)tableView:(GWLandscapeTableView *)tableView didChangeAtIndex:(NSInteger)index
+{
+    _columnBarWidget.columnIndex = index;
 }
+
 
 @end

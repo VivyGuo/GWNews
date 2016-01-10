@@ -11,7 +11,6 @@
 @interface ColumnInfo : BaseInfo
 
 @property(nonatomic,copy) NSString      *urlString;
-@property(nonatomic,copy) NSString      *replyUrl;
 
 + (NSMutableArray *)getColumnInfos;
 

@@ -22,6 +22,14 @@
     self.window.rootViewController = page;
     [self.window makeKeyAndVisible];
 }
+- (void)dictTest{
+    NSDictionary *dict = @{@"T1348647853363":@[@{@"hasCover":@"false"},@{@"url_3w":@"url3wcontent"},@{@"digest":@"digestcontent"}]};
+    NSArray  *array =  dict.allValues;
+    for(NSDictionary *obj in array){
+        NSLog(@"%@",obj);
+
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
