@@ -92,12 +92,12 @@
         _statusCode = [statusCode intValue];
         _receiveData = [[NSMutableData alloc] init];
     
-        BASE_INFO_FUN(([NSString stringWithFormat:@"statusCode:%@",statusCode]));
+//        BASE_INFO_FUN(([NSString stringWithFormat:@"statusCode:%@",statusCode]));
 }
 
 //发送请求，收到数据后，赋值receiveData
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-        BASE_INFO_FUN(([NSString stringWithFormat:@"Data length:%lu", (unsigned long)data.length]));
+//        BASE_INFO_FUN(([NSString stringWithFormat:@"Data length:%lu", (unsigned long)data.length]));
         [_receiveData appendData:data];
 }
 

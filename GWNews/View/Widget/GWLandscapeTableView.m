@@ -24,7 +24,7 @@
     // 单元格总数
     NSInteger                   _cellCount;
     // 当前索引
-    NSInteger                   _currentCellIndex;
+//    NSInteger                   _currentCellIndex;
     // 上次选择的单元格索引
     NSInteger                   _lastCellIndex;
     // 加载当前可见单元格左边的索引
@@ -118,12 +118,14 @@
         _scrollView.frame = newFrame;
     }
     if (oldFrame.size.height != _scrollView.frame.size.height) {
+        BASE_INFO_FUN(@"layoutSubviews");
         [self configureCellandScrollView];
     }
 }
 //设置scrollview可滚动范围，回收单元格，设置可见单元格
 - (void)configureCellandScrollView
 {
+    BASE_INFO_FUN(@"configureCellandScrollView");
     if (_scrollView.frame.size.width <= _gapBetweenCells + 1e-6)//1*10 ^ -6
         return;  // not our time yet
     if (_cellCount == 0 && _currentCellIndex > 0)
@@ -161,6 +163,9 @@
     // to avoid hiccups while scrolling, do not preload invisible pages temporarily
     BOOL quickMode = (_scrollViewIsMoving && _cellsToPreload > 0);
     // add missing cells
+    NSLog(@"############firstCell%lu",(unsigned long)firstCell);
+    NSLog(@"############lastCell%lu",(unsigned long)lastCell);
+
     for (NSInteger index = firstCell; index <= lastCell; index++)
     {
         if ([self cellForIndex:index] == nil) {
@@ -189,7 +194,6 @@
     // update current cell index
     BOOL cellIndexChanged = (newCellIndex != _currentCellIndex);
     if (cellIndexChanged) {
-        
         _lastCellIndex = _currentCellIndex;
         _currentCellIndex = newCellIndex;
         
@@ -200,12 +204,12 @@
 // 在可见单元格中获取指定索引的单元格
 - (GWLandscapeCell *)cellForIndex:(NSUInteger)index
 {
+    NSLog(@"############cellForIndex%lu",(unsigned long)index);
     for (GWLandscapeCell *cell in _visibleCells) {
         
         if (cell.tag == index)
             return cell;
     }
-    
     return nil;
 }
 //cell的frame,tag
@@ -214,6 +218,7 @@
     
     CGFloat cellWidthWithGap = _scrollView.frame.size.width;
     CGSize cellSize = self.bounds.size;
+    
     cell.frame = CGRectMake(cellWidthWithGap * index + _gapBetweenCells/2,0, cellSize.width, cellSize.height);
     //setNeedDisplay 标记一下，通知系统需要显示
     [cell setNeedsDisplay];
@@ -271,6 +276,7 @@
     }
     
     [_visibleCells removeAllObjects];
+    BASE_INFO_FUN(@"reloadData");
     [self configureCellandScrollView];
 }
 
@@ -279,6 +285,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (_scrollView == scrollView) {
+        BASE_INFO_FUN(@"scrollViewDidScroll");
         [self configureCellandScrollView];
     }
 }
@@ -324,6 +331,7 @@
     {
         _scrollViewIsMoving = NO;
         if (_cellsToPreload > 0){
+            BASE_INFO_FUN(@"didEndMoving");
             [self configureCellandScrollView];
         }
         

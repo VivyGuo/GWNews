@@ -61,6 +61,10 @@ ColumnBarWidget由UIButton和UIScrollView组成
 新闻页由自定义横向TableView组成(GWLandscapTableView),每个Cell(GWLandscapCell)由NewsWidget组成
 NewsWidget由竖向TableView组成，每个Cell(NewsTableViewCell)组成
 
+15.修复Bug
+1）修复新闻页面初始空白，点击栏目才出内容Bug(setColumnIndex)
+2）修复新闻Cell每项显示一样问题(Model层NewsInfo add 问题)
+3）修复切换栏目条，程序退出问题（NewsWidget reloadData）
 
 
 

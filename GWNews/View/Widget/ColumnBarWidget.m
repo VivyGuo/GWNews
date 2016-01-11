@@ -62,10 +62,20 @@
     
     _scrollView.contentSize = CGSizeMake(origin_x, 36);
 }
+//栏目更改时，newsTableView也随之变化
+- (void)setColumnIndex:(NSInteger)columnIndex
+{
+    _columnIndex = columnIndex;
+    
+    UIButton *sender = ((UIButton *)[_scrollView.subviews objectAtIndex:columnIndex]);
+    [self buttonClicked:sender];
+}
+
 //单击按钮，设置选中态样式，回调传值(按钮索引)
 - (void)buttonClicked:(UIButton *)sender
 {
     _columnIndex = sender.tag -1;
+//    NSLog(@"###########buttonCilicked:%ld",(long)_columnIndex);
     
     [self setColumnTabCenter:sender.frame];
     [_btnHelper setButton:sender normalColor:[UIColor blackColor] selectedColor:[UIColor redColor]];

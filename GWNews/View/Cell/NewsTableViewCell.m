@@ -32,7 +32,7 @@
     
     self.descLabel.numberOfLines = 2;
     self.descLabel.text = info.desc;
-//    [self setNewsImage:info.iconUrl];
+    [self setNewsImage:info.iconUrl];
     
 //    self.imageView.image = [UIImage imageWithContentsOfFile:<#(nonnull NSString *)#>];
 //    [[FxDownload download] setNewsIcon:info imageView:_imageView];
@@ -43,8 +43,7 @@
     [operation executeOp];
 }
 - (void)operation:(GWNetworkOperation *)operation successWithData:(id)data{
-    self.imageView.image = [UIImage imageWithData:data];
-
+    self.imageIcon.image = [UIImage imageWithData:data];
 }
 - (void)operation:(GWNetworkOperation *)operation failWithErrorMessage:(NSString *)message{
     BASE_ERROR_FUN(message);

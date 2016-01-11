@@ -27,11 +27,12 @@
     self.listData = [[NSMutableArray alloc] init];
     
     [self requestNewsOperation];
-    [self.newsTableView reloadData];
+//    [self.newsTableView reloadData];
 
 }
 
 - (void)reloadData{
+    BASE_INFO_FUN(@"reloadData");
     // 停止网络请求
     [_operation cancelOp];
     _operation = nil;
@@ -40,7 +41,7 @@
     [self.listData removeAllObjects];
     
     [self requestNewsOperation];
-    [self.newsTableView reloadData];
+//    [self.newsTableView reloadData];
     
 }
 
@@ -81,18 +82,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"~~~~~~~~~numbersofRows%lu",(unsigned long)(self.listData.count));
+//    NSLog(@"~~~~~~~~~numbersofRows%lu",(unsigned long)(self.listData.count));
     return self.hasNextPage?self.listData.count+1:self.listData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifier = nil;
+            cellIdentifier = self.cellIdentifier;
+
     NewsInfo *info = nil;
-    NSLog(@"~~~~~indexPath.row%ld",(long)indexPath.row);
-    NSLog(@"~~~~~listData.count%lu",(unsigned long)self.listData.count);
+//    NSLog(@"~~~~~indexPath.row%ld",(long)indexPath.row);
+//    NSLog(@"~~~~~listData.count%lu",(unsigned long)self.listData.count);
     if (indexPath.row < self.listData.count) {
-        cellIdentifier = self.cellIdentifier;
+//        cellIdentifier = self.cellIdentifier;
         info = [self.listData objectAtIndex:indexPath.row];
     }
     else {
