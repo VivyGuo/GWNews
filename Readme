@@ -66,6 +66,11 @@ NewsWidget由竖向TableView组成，每个Cell(NewsTableViewCell)组成
 2）修复新闻Cell每项显示一样问题(Model层NewsInfo add 问题)
 3）修复切换栏目条，程序退出问题（NewsWidget reloadData）
 
+16.加入新闻详情
+DetailPage->GWDetail->DetailInfo
+根据template.html替换为DetailInfo参数，加载到UIWebView
+
+
 
 
 

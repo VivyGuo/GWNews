@@ -10,6 +10,7 @@
 #import "GWGetNews.h"
 #import "NewsInfo.h"
 #import "NewsTableViewCell.h"
+#import "DetailPage.h"
 
 @interface NewsWidget ()
 
@@ -22,7 +23,7 @@
     
     self.cellIdentifier = @"NewsTableViewCell";
     self.cellHeight = 80;
-    self.pageIndex = 0;
+//    self.pageIndex = 0;
     self.hasNextPage = NO;
     self.listData = [[NSMutableArray alloc] init];
     
@@ -36,7 +37,7 @@
     // 停止网络请求
     [_operation cancelOp];
     _operation = nil;
-    self.pageIndex = 0;
+//    self.pageIndex = 0;
     // 清除上次内容
     [self.listData removeAllObjects];
     
@@ -60,10 +61,10 @@
     _operation = nil;
     self.hasNextPage = YES;
     
-    if (self.pageIndex == 0) {
-        [self.listData removeAllObjects];
-    }
-    self.pageIndex++;
+//    if (self.pageIndex == 0) {
+//        [self.listData removeAllObjects];
+//    }
+//    self.pageIndex++;
     
     [self.listData addObjectsFromArray:data];//NewsInfo Array
     [self.newsTableView reloadData];
@@ -77,31 +78,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return indexPath.row < self.listData.count ? self.cellHeight:44;
+    return self.cellHeight;
+//    return indexPath.row < self.listData.count ? self.cellHeight:44;//分页行高为44
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    NSLog(@"~~~~~~~~~numbersofRows%lu",(unsigned long)(self.listData.count));
-    return self.hasNextPage?self.listData.count+1:self.listData.count;
+    return self.listData.count;
+//    return self.hasNextPage?self.listData.count+1:self.listData.count;//分页多一个“正在加载”cell
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = nil;
-            cellIdentifier = self.cellIdentifier;
-
-    NewsInfo *info = nil;
-//    NSLog(@"~~~~~indexPath.row%ld",(long)indexPath.row);
-//    NSLog(@"~~~~~listData.count%lu",(unsigned long)self.listData.count);
-    if (indexPath.row < self.listData.count) {
-//        cellIdentifier = self.cellIdentifier;
-        info = [self.listData objectAtIndex:indexPath.row];
-    }
-    else {
-//        cellIdentifier = @"NewsMoreCell";
-//        [self requestNextPageServerOp];
-    }
+    NSString *cellIdentifier = self.cellIdentifier;
+    NewsInfo *info = [self.listData objectAtIndex:indexPath.row];
     NewsTableViewCell *cell = (NewsTableViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
@@ -114,5 +104,14 @@
     
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailPage *page = [[DetailPage alloc] init];
+    
+    page.newsInfo = [self.listData objectAtIndex:indexPath.row];
+    page.hidesBottomBarWhenPushed = YES;//隐藏导航bar
+    
+    UIViewController *owner =  self.owner;
+    [owner.navigationController pushViewController:page animated:YES];
+}
 @end

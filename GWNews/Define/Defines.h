@@ -70,5 +70,16 @@
 #define NavBarHeight7       64
 #define LocationDistance    100
 
+// HTML标记
+#define HtmlBody            @"{{body}}"
+#define HtmlTitle           @"{{title}}"
+#define HtmlSource          @"{{source}}"
+#define HtmlPTime           @"{{ptime}}"
+#define HtmlDigest          @"{{digest}}"
+#define HtmlSourceURL       @"{{source_url}}"
+#define HtmlImage           @"<p><img src='%@' style='margin:auto 0; width:100%%;' />"
+
+// 提示信息
+#define LoadingTip          @"加载中..."
 
 

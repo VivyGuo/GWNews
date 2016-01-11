@@ -13,6 +13,7 @@
 @interface NewsTableViewCell()<GWNetworkOperationDelegate>
 
 @end
+
 @implementation NewsTableViewCell
 //下载图片
 - (void)initCell
@@ -33,15 +34,17 @@
     self.descLabel.numberOfLines = 2;
     self.descLabel.text = info.desc;
     [self setNewsImage:info.iconUrl];
-    
-//    self.imageView.image = [UIImage imageWithContentsOfFile:<#(nonnull NSString *)#>];
-//    [[FxDownload download] setNewsIcon:info imageView:_imageView];
+    //    [[FxDownload download] setNewsIcon:info imageView:_imageView];
 }
 - (void)setNewsImage:(NSString *)imageUrl{
+//    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+//    self.imageIcon.image = [UIImage imageWithData:imageData];//这种方法巨慢，并且卡顿
+    
     NSDictionary *dictInfo = @{@"url":imageUrl};
     GWNetworkOperation *operation = [[GWGetImage alloc] initWithDelegate:self opInfo:dictInfo];
     [operation executeOp];
 }
+
 - (void)operation:(GWNetworkOperation *)operation successWithData:(id)data{
     self.imageIcon.image = [UIImage imageWithData:data];
 }

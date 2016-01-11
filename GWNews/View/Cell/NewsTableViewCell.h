@@ -13,7 +13,6 @@
 @property(nonatomic,weak) IBOutlet UIImageView    *imageIcon;
 @property(nonatomic,weak) IBOutlet UILabel        *titleLabel;
 @property(nonatomic,weak) IBOutlet UILabel        *descLabel;
-
 @property(nonatomic, strong) NewsInfo             *cellInfo;
 
 - (void)initCell;

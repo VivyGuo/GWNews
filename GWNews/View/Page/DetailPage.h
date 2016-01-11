@@ -6,8 +6,15 @@
 //  Copyright © 2016年 guowei. All rights reserved.
 //
 
-#import "GWBaseDetailPgae.h"
+#import "GWBaseNavPage.h"
+@class NewsInfo;
+@interface DetailPage : GWBaseNavPage{
+    IBOutlet UIWebView  *_webView;
+}
 
-@interface DetailPage : GWBaseDetailPgae
+@property(nonatomic, strong) NSString   *urlString;
+@property(nonatomic, strong) NewsInfo   *newsInfo;
+
+- (void)loadHtml;
 
 @end
