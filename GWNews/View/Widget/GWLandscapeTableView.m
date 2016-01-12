@@ -52,7 +52,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"initWithFrame");
         [self internalInit];
     }
     return self;
@@ -118,14 +117,12 @@
         _scrollView.frame = newFrame;
     }
     if (oldFrame.size.height != _scrollView.frame.size.height) {
-        BASE_INFO_FUN(@"layoutSubviews");
         [self configureCellandScrollView];
     }
 }
 //设置scrollview可滚动范围，回收单元格，设置可见单元格
 - (void)configureCellandScrollView
 {
-    BASE_INFO_FUN(@"configureCellandScrollView");
     if (_scrollView.frame.size.width <= _gapBetweenCells + 1e-6)//1*10 ^ -6
         return;  // not our time yet
     if (_cellCount == 0 && _currentCellIndex > 0)
@@ -163,9 +160,6 @@
     // to avoid hiccups while scrolling, do not preload invisible pages temporarily
     BOOL quickMode = (_scrollViewIsMoving && _cellsToPreload > 0);
     // add missing cells
-    NSLog(@"############firstCell%lu",(unsigned long)firstCell);
-    NSLog(@"############lastCell%lu",(unsigned long)lastCell);
-
     for (NSInteger index = firstCell; index <= lastCell; index++)
     {
         if ([self cellForIndex:index] == nil) {
@@ -204,7 +198,6 @@
 // 在可见单元格中获取指定索引的单元格
 - (GWLandscapeCell *)cellForIndex:(NSUInteger)index
 {
-    NSLog(@"############cellForIndex%lu",(unsigned long)index);
     for (GWLandscapeCell *cell in _visibleCells) {
         
         if (cell.tag == index)
@@ -276,7 +269,6 @@
     }
     
     [_visibleCells removeAllObjects];
-    BASE_INFO_FUN(@"reloadData");
     [self configureCellandScrollView];
 }
 
@@ -285,7 +277,6 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (_scrollView == scrollView) {
-        BASE_INFO_FUN(@"scrollViewDidScroll");
         [self configureCellandScrollView];
     }
 }
@@ -331,7 +322,6 @@
     {
         _scrollViewIsMoving = NO;
         if (_cellsToPreload > 0){
-            BASE_INFO_FUN(@"didEndMoving");
             [self configureCellandScrollView];
         }
         

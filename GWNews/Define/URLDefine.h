@@ -30,5 +30,15 @@
 
 #define CityCodeURLFmt  @"http://apistore.baidu.com/microservice/cityinfo?cityname=%@"
 
+// HTML标记
+#define HtmlBody            @"{{body}}"
+#define HtmlTitle           @"{{title}}"
+#define HtmlSource          @"{{source}}"
+#define HtmlPTime           @"{{ptime}}"
+#define HtmlDigest          @"{{digest}}"
+#define HtmlEC              @"{{ec}}"
+#define HtmlImage           @"<p><img src='%@' style='margin:auto 0; width:100%%;' />"
 
+// 提示信息
+#define LoadingTip          @"加载中..."
 

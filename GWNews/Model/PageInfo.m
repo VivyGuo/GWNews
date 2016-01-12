@@ -35,30 +35,5 @@
     
     return pageInfoArray;
 }
-////返回带导航条的相应的各个页面的ViewController
-//+ (NSArray *)getPageViewControllerArray{
-//    
-//    NSMutableArray *pageViewControllerArray = [NSMutableArray array];
-//    NSArray *pageInfoArray = [PageInfo getPageInfoArray];//类方法内只能调用类方法，不能调用实例方法
-//    UIViewController *pageViewController = nil;
-//    UINavigationController *navigationPage = nil;
-//    
-//    for (PageInfo *pageInfo in pageInfoArray) {
-//        //如果该页不显示，跳过本轮，继续下一轮for
-//        if (!pageInfo.load) {
-//                continue;
-//        }
-//        
-//        //创建相应页面的ViewController，设置ViewController的title,image
-//        pageViewController = [[NSClassFromString(pageInfo.ID) alloc] init ];
-//        pageViewController.title = pageInfo.name;
-//        pageViewController.tabBarItem.image = [UIImage imageNamed:pageInfo.image];
-//        pageViewController.tabBarItem.selectedImage = [UIImage imageNamed:pageInfo.selectImage];
-//   
-//        navigationPage = [[UINavigationController alloc] initWithRootViewController:pageViewController];
-//        [pageViewControllerArray addObject:navigationPage];
-//    }
-//    return pageViewControllerArray;
-//}
 
 @end

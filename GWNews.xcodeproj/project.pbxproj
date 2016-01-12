@@ -33,6 +33,10 @@
 		E79158FD1C21A8BF00F61B7E /* GWJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158F61C21A8BF00F61B7E /* GWJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E79158FE1C21A8BF00F61B7E /* GWJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158F81C21A8BF00F61B7E /* GWJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E79158FF1C21A8BF00F61B7E /* GWJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158FA1C21A8BF00F61B7E /* GWJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E7AD5C1E1C45038C00160CED /* DiscoveryPage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD5C171C45038C00160CED /* DiscoveryPage.m */; };
+		E7AD5C1F1C45038C00160CED /* MyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD5C191C45038C00160CED /* MyPage.m */; };
+		E7AD5C201C45038C00160CED /* ReaderPage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD5C1B1C45038C00160CED /* ReaderPage.m */; };
+		E7AD5C211C45038C00160CED /* VoicePage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD5C1D1C45038C00160CED /* VoicePage.m */; };
 		E7BBB4E51C42BEA000959549 /* GWDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BBB4E41C42BEA000959549 /* GWDownload.m */; };
 		E7CC33961C3AD10400A027E0 /* GWBaseWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CC33951C3AD10400A027E0 /* GWBaseWidget.m */; };
 		E7CC33991C3AD12F00A027E0 /* ColumnBarWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CC33981C3AD12F00A027E0 /* ColumnBarWidget.m */; };
@@ -156,6 +160,14 @@
 		E79158FA1C21A8BF00F61B7E /* GWJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWJsonWriter.m; sourceTree = "<group>"; };
 		E7A0A4621C1EF900003662CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A0A4641C1EF927003662CA /* GwNews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GwNews-Prefix.pch"; sourceTree = "<group>"; };
+		E7AD5C161C45038C00160CED /* DiscoveryPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveryPage.h; sourceTree = "<group>"; };
+		E7AD5C171C45038C00160CED /* DiscoveryPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveryPage.m; sourceTree = "<group>"; };
+		E7AD5C181C45038C00160CED /* MyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPage.h; sourceTree = "<group>"; };
+		E7AD5C191C45038C00160CED /* MyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPage.m; sourceTree = "<group>"; };
+		E7AD5C1A1C45038C00160CED /* ReaderPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderPage.h; sourceTree = "<group>"; };
+		E7AD5C1B1C45038C00160CED /* ReaderPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderPage.m; sourceTree = "<group>"; };
+		E7AD5C1C1C45038C00160CED /* VoicePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoicePage.h; sourceTree = "<group>"; };
+		E7AD5C1D1C45038C00160CED /* VoicePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoicePage.m; sourceTree = "<group>"; };
 		E7BBB4E31C42BEA000959549 /* GWDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWDownload.h; sourceTree = "<group>"; };
 		E7BBB4E41C42BEA000959549 /* GWDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWDownload.m; sourceTree = "<group>"; };
 		E7CC33941C3AD10400A027E0 /* GWBaseWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWBaseWidget.h; sourceTree = "<group>"; };
@@ -445,6 +457,14 @@
 				E724A0E81C381E86007154C8 /* NewsPage.m */,
 				E724A0F61C381EE6007154C8 /* DetailPage.h */,
 				E724A0F71C381EE6007154C8 /* DetailPage.m */,
+				E7AD5C161C45038C00160CED /* DiscoveryPage.h */,
+				E7AD5C171C45038C00160CED /* DiscoveryPage.m */,
+				E7AD5C181C45038C00160CED /* MyPage.h */,
+				E7AD5C191C45038C00160CED /* MyPage.m */,
+				E7AD5C1A1C45038C00160CED /* ReaderPage.h */,
+				E7AD5C1B1C45038C00160CED /* ReaderPage.m */,
+				E7AD5C1C1C45038C00160CED /* VoicePage.h */,
+				E7AD5C1D1C45038C00160CED /* VoicePage.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -783,13 +803,16 @@
 				E77F90131C36BDC300FAF680 /* GWButtonHelper.m in Sources */,
 				E77F90161C36BDC300FAF680 /* GWString.m in Sources */,
 				E77F90151C36BDC300FAF680 /* GWFileUtility.m in Sources */,
+				E7AD5C1F1C45038C00160CED /* MyPage.m in Sources */,
 				E77F90191C36C82A00FAF680 /* GWGlobal.m in Sources */,
 				E7D7389C1C27F366002EE70D /* GWGetAdvert.m in Sources */,
 				E77F90141C36BDC300FAF680 /* GWDate.m in Sources */,
+				E7AD5C1E1C45038C00160CED /* DiscoveryPage.m in Sources */,
 				E761548D1C4435D800302D32 /* GWGetDetail.m in Sources */,
 				E7F517811C3EFD6700C1B4D8 /* NewsTableViewCell.m in Sources */,
 				E7D738A21C27F397002EE70D /* GWGetNews.m in Sources */,
 				E7DBF51F1C353B6D00B84626 /* GWBaseViewController.m in Sources */,
+				E7AD5C201C45038C00160CED /* ReaderPage.m in Sources */,
 				E79158FE1C21A8BF00F61B7E /* GWJsonUtility.m in Sources */,
 				E7BBB4E51C42BEA000959549 /* GWDownload.m in Sources */,
 				E76154901C44360500302D32 /* DetailInfo.m in Sources */,
@@ -801,6 +824,7 @@
 				E724A0F81C381EE6007154C8 /* DetailPage.m in Sources */,
 				E7DBF5251C353BF400B84626 /* AdvertPage.m in Sources */,
 				E7D738991C27F2EF002EE70D /* GWNetworkOperation.m in Sources */,
+				E7AD5C211C45038C00160CED /* VoicePage.m in Sources */,
 				E724A0E91C381E86007154C8 /* NewsPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

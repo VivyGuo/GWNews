@@ -46,7 +46,6 @@
 }
 //选中某栏目后回调操作
 - (void)didSelect:(NSInteger)columnIndex{
-    NSLog(@"#############columnIndex%ld",(long)columnIndex);
     if (_landscapeTableView.currentCellIndex != columnIndex) {
         _landscapeTableView.currentCellIndex = columnIndex;
         [_landscapeTableView reloadData];

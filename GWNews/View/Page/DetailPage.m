@@ -65,12 +65,13 @@
     NSString *file = [[NSBundle mainBundle] pathForResource:@"content_template" ofType:@"html"];
     NSString *html = [[NSString alloc] initWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
 
+//    NSLog(@"###info%@",info);
     html = [html stringByReplacingOccurrencesOfString:HtmlBody withString:info.body];
     html = [html stringByReplacingOccurrencesOfString:HtmlTitle withString:info.title];
     html = [html stringByReplacingOccurrencesOfString:HtmlSource withString:info.source];
     html = [html stringByReplacingOccurrencesOfString:HtmlPTime withString:info.ptime];
     html = [html stringByReplacingOccurrencesOfString:HtmlDigest withString:info.digest];
-    html = [html stringByReplacingOccurrencesOfString:HtmlSourceURL withString:info.sourceurl];
+    html = [html stringByReplacingOccurrencesOfString:HtmlEC withString:info.ec];
 
 ////    if (info.images.count > 0) {
 ////        NSString *img = nil;
