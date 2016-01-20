@@ -42,6 +42,7 @@
     ColumnInfo *info = nil;
     
     _scrollView.contentInset = buttonInsets;
+    _scrollView.showsHorizontalScrollIndicator = FALSE;
     
     for(index=0; index<self.listData.count; index++) {
         

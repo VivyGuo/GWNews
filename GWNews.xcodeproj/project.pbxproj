@@ -147,7 +147,7 @@
 		E79093281C16C348006A9023 /* GWNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GWNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E790932C1C16C348006A9023 /* GWNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWNewsUITests.m; sourceTree = "<group>"; };
 		E790932E1C16C348006A9023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E790933A1C16C9D1006A9023 /* Readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
+		E790933A1C16C9D1006A9023 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		E790934D1C16D3B8006A9023 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		E79158F11C21A8BF00F61B7E /* GWJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWJSON.h; sourceTree = "<group>"; };
 		E79158F21C21A8BF00F61B7E /* GWJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWJSON.m; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		E79092FB1C16C347006A9023 = {
 			isa = PBXGroup;
 			children = (
-				E790933A1C16C9D1006A9023 /* Readme */,
+				E790933A1C16C9D1006A9023 /* Readme.md */,
 				E79093061C16C347006A9023 /* GWNews */,
 				E79093201C16C348006A9023 /* GWNewsTests */,
 				E790932B1C16C348006A9023 /* GWNewsUITests */,
