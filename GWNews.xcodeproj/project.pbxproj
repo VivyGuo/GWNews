@@ -33,6 +33,7 @@
 		E79158FD1C21A8BF00F61B7E /* GWJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158F61C21A8BF00F61B7E /* GWJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E79158FE1C21A8BF00F61B7E /* GWJsonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158F81C21A8BF00F61B7E /* GWJsonUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E79158FF1C21A8BF00F61B7E /* GWJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E79158FA1C21A8BF00F61B7E /* GWJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E79DB9991C4E504A00B07FE5 /* DetailImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E79DB9981C4E504A00B07FE5 /* DetailImageInfo.m */; };
 		E7AD5C1E1C45038C00160CED /* DiscoveryPage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD5C171C45038C00160CED /* DiscoveryPage.m */; };
 		E7AD5C1F1C45038C00160CED /* MyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD5C191C45038C00160CED /* MyPage.m */; };
 		E7AD5C201C45038C00160CED /* ReaderPage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD5C1B1C45038C00160CED /* ReaderPage.m */; };
@@ -158,6 +159,8 @@
 		E79158F81C21A8BF00F61B7E /* GWJsonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWJsonUtility.m; sourceTree = "<group>"; };
 		E79158F91C21A8BF00F61B7E /* GWJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWJsonWriter.h; sourceTree = "<group>"; };
 		E79158FA1C21A8BF00F61B7E /* GWJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWJsonWriter.m; sourceTree = "<group>"; };
+		E79DB9971C4E504A00B07FE5 /* DetailImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailImageInfo.h; sourceTree = "<group>"; };
+		E79DB9981C4E504A00B07FE5 /* DetailImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailImageInfo.m; sourceTree = "<group>"; };
 		E7A0A4621C1EF900003662CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A0A4641C1EF927003662CA /* GwNews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GwNews-Prefix.pch"; sourceTree = "<group>"; };
 		E7AD5C161C45038C00160CED /* DiscoveryPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveryPage.h; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 				E78271A81C399C0600A59D6B /* PageInfo.m */,
 				E761548E1C44360500302D32 /* DetailInfo.h */,
 				E761548F1C44360500302D32 /* DetailInfo.m */,
+				E79DB9971C4E504A00B07FE5 /* DetailImageInfo.h */,
+				E79DB9981C4E504A00B07FE5 /* DetailImageInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -805,6 +810,7 @@
 				E77F90151C36BDC300FAF680 /* GWFileUtility.m in Sources */,
 				E7AD5C1F1C45038C00160CED /* MyPage.m in Sources */,
 				E77F90191C36C82A00FAF680 /* GWGlobal.m in Sources */,
+				E79DB9991C4E504A00B07FE5 /* DetailImageInfo.m in Sources */,
 				E7D7389C1C27F366002EE70D /* GWGetAdvert.m in Sources */,
 				E77F90141C36BDC300FAF680 /* GWDate.m in Sources */,
 				E7AD5C1E1C45038C00160CED /* DiscoveryPage.m in Sources */,

@@ -7,12 +7,8 @@
 //
 
 #import "DetailInfo.h"
-
+#import "DetailImageInfo.h"
 @implementation DetailInfo
-
-- (NSString *)description{
-    return  [NSString stringWithFormat:@"title:%@,\nsource:%@,\ndigest:%@,\nptime:%@,\nec:%@,\nsourceurl:%@,\nbody:%@",self.title,self.source,self.digest,self.ptime,self.ec,self.sourceurl,self.body];
-}
 
 + (instancetype)infoFromDict:(NSDictionary *)dict
 {
@@ -25,10 +21,14 @@
     info.body = [dict objectForKey:@"body"]?([dict objectForKey:@"body"]):@"";
     info.ec = [dict objectForKey:@"ec"]?([dict objectForKey:@"ec"]):@"";
     info.sourceurl = [dict objectForKey:@"source_url"]?([dict objectForKey:@"source_url"]):@"";
-    
-//    NSArray *images =[dict objectForKey:@"img"];
-//    info.images = [ContentImageInfo arrayFromArray:images];
+    //图片数组
+    NSArray *images =[dict objectForKey:@"img"];
+    info.images = [DetailImageInfo infosFromArray:images];
     
     return info;
+}
+
+- (NSString *)description{
+    return  [NSString stringWithFormat:@"title:%@,\nsource:%@,\ndigest:%@,\nptime:%@,\nec:%@,\nsourceurl:%@,\nbody:%@",self.title,self.source,self.digest,self.ptime,self.ec,self.sourceurl,self.body];
 }
 @end

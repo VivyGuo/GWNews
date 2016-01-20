@@ -1,3 +1,24 @@
+function removeDigestDiv(){
+    console.info("一般信息");
+    alert("remove");
+    var digestDiv = document.getElementsByClassName("PRE").parentNode;
+    if (digestDiv != null)
+        digestDiv.parentNode.removeChild(digestDiv);
+    
+    //id为body_section的div 内增加<p><div class=\'PRE\'>{{digest}}</div></p>
+}
+function addDigestDiv(){
+    //如果存在增加
+    console.info("二般信息");
+    alert("add")
+    var digestDiv = document.getElementsByClassName("PRE");
+    if(digestDiv == null){
+        var digestDivparent = document.getElementById("body_section");
+        var digestP = document.createElement("p");
+        digestP.innerHTML = "<div class=\'PRE\'>{{digest}}</div>";
+        digestDivparent.appendChild(digestP);
+    }
+}
 function extend_image(url,element){
     //不可点击的图片特殊处理,parent节点添加extend=no
     if (element.parentElement.parentElement.getAttribute('extend') == "no") {

@@ -23,8 +23,6 @@
     
     self.cellIdentifier = @"NewsTableViewCell";
     self.cellHeight = 80;
-//    self.pageIndex = 0;
-    self.hasNextPage = NO;
     self.listData = [[NSMutableArray alloc] init];
     
     [self requestNewsOperation];
@@ -37,7 +35,6 @@
     // 停止网络请求
     [_operation cancelOp];
     _operation = nil;
-//    self.pageIndex = 0;
     // 清除上次内容
     [self.listData removeAllObjects];
     
@@ -59,12 +56,6 @@
 
 - (void)operation:(GWNetworkOperation *)operation successWithData:(id)data{
     _operation = nil;
-    self.hasNextPage = YES;
-    
-//    if (self.pageIndex == 0) {
-//        [self.listData removeAllObjects];
-//    }
-//    self.pageIndex++;
     
     [self.listData addObjectsFromArray:data];//NewsInfo Array
     [self.newsTableView reloadData];

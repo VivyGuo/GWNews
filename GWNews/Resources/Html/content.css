@@ -543,10 +543,10 @@ body.night .lm_recommend_welfare_tag{margin-left: 20px; position: absolute; top:
  */
 @media screen and (min-device-width: 375px) and (max-device-width:667px){
     
-    body{padding-top: 112px;}
+    body{padding-top: 20px;}
     
-    #title{font-size:41px;}
-    #subtitle{font-size:23px;}
+    #title{font-size:25px;}
+    #subtitle{font-size:15px;}
     
     #body_section.font_largexxx{font-size:49px;}
     #body_section.font_largexx{font-size:45px;}
@@ -573,10 +573,10 @@ body.night .lm_recommend_welfare_tag{margin-left: 20px; position: absolute; top:
  */
 @media screen and (min-device-width: 414px) and (max-device-width:736px){
     
-    body{padding-top: 102px;}
+    body{padding-top: 20px;}
     
-    #title{font-size:38px;}
-    #subtitle{font-size:20px;}
+    #title{font-size:25px;}
+    #subtitle{font-size:15px;}
     
     #body_section.font_largexxx{font-size:45px;}
     #body_section.font_largexx{font-size:41px;}

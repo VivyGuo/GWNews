@@ -13,6 +13,5 @@
 @property(nonatomic,copy) NSString *desc;
 @property(nonatomic,copy) NSString *iconUrl;
 @property(nonatomic,copy) NSString *contentUrl;
-@property(nonatomic,copy) NSString *detailUrl;
 
 @end

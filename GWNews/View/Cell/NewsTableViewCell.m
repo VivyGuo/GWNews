@@ -9,22 +9,19 @@
 #import "NewsTableViewCell.h"
 #import "NewsInfo.h"
 #import "GWGetImage.h"
-
-@interface NewsTableViewCell()<GWNetworkOperationDelegate>
-
-@end
+#import "GWDownload.h"
 
 @implementation NewsTableViewCell
-//下载图片
+
 - (void)initCell
-{
-//    RegisterNotify(NofifyNewsIcon, @selector(downloadIcon:));
+{//添加观察者，图片下载完成更新cell
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downloadIcon:) name:NofifyNewsIcon object:nil];
 }
-//
-//- (void)dealloc
-//{
-//    RemoveNofify;
-//}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)setCellData:(NewsInfo *)info
 {
@@ -33,35 +30,37 @@
     
     self.descLabel.numberOfLines = 2;
     self.descLabel.text = info.desc;
-    [self setNewsImage:info.iconUrl];
-    //    [[FxDownload download] setNewsIcon:info imageView:_imageView];
+    //下载图片方法三：多线程异步下载图片
+    [[GWDownload download] setNewsImage:self.imageIcon object:info];
 }
-- (void)setNewsImage:(NSString *)imageUrl{
-//    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-//    self.imageIcon.image = [UIImage imageWithData:imageData];//这种方法巨慢，并且卡顿
+
+//接受通知发生改变，更新图片
+- (void)downloadIcon:(NSNotification *)notification
+{
+    NSDictionary *dict = [notification object];
+    NewsInfo *info = [dict objectForKey:@"info"];
     
-    NSDictionary *dictInfo = @{@"url":imageUrl};
-    GWNetworkOperation *operation = [[GWGetImage alloc] initWithDelegate:self opInfo:dictInfo];
-    [operation executeOp];
+    if ([info.ID isEqualToString:self.cellInfo.ID]) {
+        UIImage *image = [dict objectForKey:@"data"];
+        self.imageIcon.image = image;
+    }
 }
 
-- (void)operation:(GWNetworkOperation *)operation successWithData:(id)data{
-    self.imageIcon.image = [UIImage imageWithData:data];
-}
-- (void)operation:(GWNetworkOperation *)operation failWithErrorMessage:(NSString *)message{
-    BASE_ERROR_FUN(message);
-}
-
-
-
-//- (void)downloadIcon:(NSNotification *)notification
-//{
-//    NSDictionary *dict = [notification object];
-//    NewsInfo *info = [dict objectForKey:@"info"];
-//    
-//    if ([info.ID isEqualToString:self.cellInfo.ID]) {
-//        UIImage *image = [dict objectForKey:@"data"];
-//        _imageView.image = image;
-//    }
+//- (void)setNewsImage:(NSString *)imageUrl{
+    //下载图片方法一：在主线程中下载，速度巨慢并且页面卡顿
+    //    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+    //    self.imageIcon.image = [UIImage imageWithData:imageData];
+    //下载图片方法二：通过委托模式
+//    NSDictionary *dictInfo = @{@"url":imageUrl};
+//    GWNetworkOperation *operation = [[GWGetImage alloc] initWithDelegate:self opInfo:dictInfo];
+//    [operation executeOp];
 //}
+//- (void)operation:(GWNetworkOperation *)operation successWithData:(id)data{
+//    self.imageIcon.image = [UIImage imageWithData:data];
+//}
+//- (void)operation:(GWNetworkOperation *)operation failWithErrorMessage:(NSString *)message{
+//    BASE_ERROR_FUN(message);
+//}
+
+
 @end

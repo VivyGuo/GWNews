@@ -43,9 +43,7 @@
 
 #pragma mark - Activity methods
 /*显示、隐藏提示框*/
-- (void)showIndicator:(NSString *)tipMessage
-             autoHide:(BOOL)hide
-           afterDelay:(BOOL)delay
+- (void)showIndicator:(NSString *)tipMessage autoHide:(BOOL)hide afterDelay:(BOOL)delay
 {
     if (_activity == nil) {
         _activity = [self showActivityInView:self.view];

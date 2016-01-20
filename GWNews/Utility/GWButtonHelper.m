@@ -9,13 +9,13 @@
 
 - (void)setButton:(UIButton *)btn normalColor:(UIColor *)nColor selectedColor:(UIColor *)sColor
 {
-    [self setSelected:NO];
+    [self setSelected:NO];//上一个Button复原
     
     self.button = btn;
     self.normalColor = nColor;
     self.selectedColor = sColor;
     
-    [self setSelected:YES];
+    [self setSelected:YES];//当前Button变色
 }
 
 - (void)setSelected:(BOOL)selected

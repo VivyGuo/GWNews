@@ -18,8 +18,5 @@
 @property(nonatomic,copy)NSString                 *newsUrl;
 @property(nonatomic,assign)id                     owner;
 
-@property(nonatomic,assign)NSInteger              pageIndex;
-@property(nonatomic,assign)BOOL                   hasNextPage;
-
 - (void)reloadData;
 @end

@@ -76,7 +76,7 @@
 + (NSString *)getRootPath
 {
     NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:RootPath];
-    BASE_INFO_FUN(NSHomeDirectory());//沙盒目录
+//    BASE_INFO_FUN(NSHomeDirectory());//沙盒目录
     return path;
 }
 

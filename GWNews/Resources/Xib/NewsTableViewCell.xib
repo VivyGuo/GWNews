@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,22 +15,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewsDefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-MJ-EdS">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewsDefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-MJ-EdS">
                         <rect key="frame" x="8" y="8" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Ltp-jw-fnN"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-EN-R4m" userLabel="TitleLabel">
-                        <rect key="frame" x="96" y="8" width="216" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-EN-R4m" userLabel="TitleLabel">
+                        <rect key="frame" x="96" y="8" width="211" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM3-WW-EMO" userLabel="DescLabel">
-                        <rect key="frame" x="96" y="29" width="216" height="42"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM3-WW-EMO" userLabel="DescLabel">
+                        <rect key="frame" x="96" y="29" width="211" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="Lc9-HJ-sqw"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="sCY-MJ-EdS" secondAttribute="bottom" constant="3" id="5HQ-cj-vb5"/>
+                    <constraint firstItem="sCY-MJ-EdS" firstAttribute="leading" secondItem="HuB-Ix-hsK" secondAttribute="leadingMargin" id="5MY-h1-jdj"/>
+                    <constraint firstItem="UM3-WW-EMO" firstAttribute="bottom" secondItem="HuB-Ix-hsK" secondAttribute="bottomMargin" id="HbM-Km-MVn"/>
+                    <constraint firstItem="UM3-WW-EMO" firstAttribute="trailing" secondItem="cyN-EN-R4m" secondAttribute="trailing" id="Iju-lX-tOv"/>
+                    <constraint firstItem="sCY-MJ-EdS" firstAttribute="top" secondItem="cyN-EN-R4m" secondAttribute="top" id="KUA-YD-p8W"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UM3-WW-EMO" secondAttribute="trailing" constant="5" id="Ub4-5w-K3K"/>
+                    <constraint firstItem="UM3-WW-EMO" firstAttribute="leading" secondItem="sCY-MJ-EdS" secondAttribute="trailing" constant="8" symbolic="YES" id="Y0u-kN-n2w"/>
+                    <constraint firstItem="sCY-MJ-EdS" firstAttribute="top" secondItem="HuB-Ix-hsK" secondAttribute="topMargin" id="bkg-sw-1EQ"/>
+                    <constraint firstItem="UM3-WW-EMO" firstAttribute="top" secondItem="cyN-EN-R4m" secondAttribute="bottom" id="cfW-Tf-oMH"/>
+                    <constraint firstItem="cyN-EN-R4m" firstAttribute="leading" secondItem="sCY-MJ-EdS" secondAttribute="trailing" constant="8" symbolic="YES" id="egB-gz-UQr"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="descLabel" destination="UM3-WW-EMO" id="slB-Nk-jew"/>

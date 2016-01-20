@@ -7,15 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class NewsInfo;
 @interface GWDownload : NSObject
 
-@property(nonatomic, strong)NSMutableDictionary *dictIcons;
-
 + (GWDownload *)download;
-
 - (void)cancelDownload;
-- (void)setNewsIcon:(NewsInfo *)newsInfo
-          imageView:(UIImageView *)imageView;
+- (void)setNewsImage:(UIImageView *)imageView object:(NewsInfo *)newsInfo;
 
 @end

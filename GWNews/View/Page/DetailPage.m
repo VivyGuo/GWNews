@@ -10,7 +10,7 @@
 #import "DetailInfo.h"
 #import "GWGetDetail.h"
 #import "NewsInfo.h"
-
+#import "DetailImageInfo.h"
 @implementation DetailPage
 
 - (void)viewDidLoad
@@ -56,7 +56,6 @@
     
     NSString *urlString = [[NSBundle mainBundle] pathForResource:@"content_template" ofType:@"html"];
     NSString *htmlString = [self htmlConvert:info];
-    
     [_webView loadHTMLString:htmlString baseURL:[NSURL URLWithString:urlString]];
 }
 
@@ -65,23 +64,22 @@
     NSString *file = [[NSBundle mainBundle] pathForResource:@"content_template" ofType:@"html"];
     NSString *html = [[NSString alloc] initWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
 
-//    NSLog(@"###info%@",info);
     html = [html stringByReplacingOccurrencesOfString:HtmlBody withString:info.body];
     html = [html stringByReplacingOccurrencesOfString:HtmlTitle withString:info.title];
     html = [html stringByReplacingOccurrencesOfString:HtmlSource withString:info.source];
     html = [html stringByReplacingOccurrencesOfString:HtmlPTime withString:info.ptime];
-    html = [html stringByReplacingOccurrencesOfString:HtmlDigest withString:info.digest];
     html = [html stringByReplacingOccurrencesOfString:HtmlEC withString:info.ec];
+//    [_webView stringByEvaluatingJavaScriptFromString:@"addDigestDiv()"];//需在loadHTMLString方法之后才能调用js方法
+//    html = [html stringByReplacingOccurrencesOfString:HtmlDigest withString:info.digest];
 
-////    if (info.images.count > 0) {
-////        NSString *img = nil;
-////        
-////        for (ContentImageInfo *imageInfo in info.images) {
-////            img = [NSString stringWithFormat:HtmlImage, imageInfo.src];
-////            html = [html stringByReplacingOccurrencesOfString:imageInfo.ref withString:img];
-////        }
-////    }
-//    
+    //替换图片数组
+    if (info.images.count > 0) {
+        NSString *img = nil;
+        for (DetailImageInfo *imageInfo in info.images) {
+            img = [NSString stringWithFormat:HtmlImage, imageInfo.src];//图片格式
+            html = [html stringByReplacingOccurrencesOfString:imageInfo.ref withString:img];//替换
+        }
+    }
     return html;
 }
 - (IBAction)doBack:(id)sender

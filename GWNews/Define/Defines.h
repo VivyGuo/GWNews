@@ -47,6 +47,8 @@
 #define IsiPhone6   (IsiPhone && ScreenMaxLength == 667.0)
 #define IsiPhone6s  (IsiPhone && ScreenMaxLength == 736.0)
 
+//消息通知
+#define NofifyNewsIcon      @"NewsIcon"
 
 // 文件缓存路径
 #define RootPath            @"/Library/.GWNews"

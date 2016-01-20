@@ -10,7 +10,7 @@
 
 @implementation NewsInfo
 - (NSString *)description{
-    return  [NSString stringWithFormat:@"docid:%@\n,title:%@\n,digest:%@\n,imgsrc:%@\n,url3w:%@",self.ID,self.name,self.desc,self.iconUrl,self.detailUrl];
+    return  [NSString stringWithFormat:@"docid:%@\n,title:%@\n,digest:%@\n,imgsrc:%@\n",self.ID,self.name,self.desc,self.iconUrl];
 }
 
 +(NSArray *)infosFromDict:(NSDictionary *)dict
