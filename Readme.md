@@ -94,7 +94,9 @@ NewsWidget由竖向TableView组成，每个Cell(NewsTableViewCell)组成
 
 
 ####5.项目截图
+
 ![](https://github.com/VivyGuo/GWNews/raw/master/Screenshot/NewsReader.gif)
+
 
 ---
 
