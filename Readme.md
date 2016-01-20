@@ -1,29 +1,3 @@
-学习路程：
-
-1.书籍
-
-语言基础：《Objective-C程序设计(第四版)》
-
-开发流程：《iOS编程(第四版)》BNR出品
-
-技能进阶：《Effectiv Objective-C 2.0》(52个有效方法，好书)
-
-其他参考：《iOS设计模式解析》《iOS与OSX多线程和内存管理》《iOS开发进阶》(部分)
-
-2.视频 
-
-各大网站基础教学视频(感谢之);
-斯坦福iOS8开发C193P课程部分
-
-3.项目
-
-Github上优秀项目
-
-各种练手小例子若干
-
-各种博客文章，官方文档，问答网站，答疑解难
-
----
 ##项目说明
 仿新闻客户端GWNews，通过学习此项目，get iOS开发Good技能
 
@@ -42,13 +16,13 @@ Github上优秀项目
 ####3.项目结构
 框架：MOVE模型
 
-######3.1Model:数据模型类
+#####3.1Model:数据模型类
 
 1)基类BaseInfo, 包括数据实体通用属性及从获取数据实体的方法
 
 2)广告实体AdvertInfo,页面实体PageInfo,栏目实体ColumnInfo,新闻实体NewsInfo,详情实体DetailInfo
 
-######3.2Operation:网络请求操作类
+#####3.2Operation:网络请求操作类
 
 1）网络请求基类GWNetworkOperation
 
@@ -58,7 +32,7 @@ Github上优秀项目
 
 3）采用委托设计模式，返回数据后由实现协议的类(各个页面ViewController)执行后续操作。
 
-######3.3View:视图类
+#####3.3View:视图类
 
 视图基类GWBaseViewController，实现GWNetworkOperationDelegate协议
 
@@ -86,11 +60,11 @@ NewsWidget由竖向TableView组成，每个Cell(NewsTableViewCell)组成
 
 4）详情页由UIWebView组成，解析html模板，将详情实体数据替换到模板中
 
-######3.4Event:界面的事件
+#####3.4Event:界面的事件
 
 点击、滑动、状态改变等触发的事件
 
-######3.5工具类
+#####3.5工具类
 
 1)字符串：编码转换，删除空格等功能
 
@@ -109,7 +83,7 @@ NewsWidget由竖向TableView组成，每个Cell(NewsTableViewCell)组成
 8)Json库：将Json格式字符串转为对象(字典数组)，将对象转为Json字符串
 
 
-###4.可借鉴的技能
+###4.技术总结
 ######1)抽象出共同特性，作为基类，方便扩展，利于修改
 ######2)将数据源，数据业务逻辑从VC中抽离，功能解耦
 ######3)封装网络请求，利用委托模式回调
@@ -122,9 +96,36 @@ NewsWidget由竖向TableView组成，每个Cell(NewsTableViewCell)组成
 ####5.项目截图
 ![](https://github.com/VivyGuo/GWNews/raw/master/Screenshot/NewsReader.gif)
 
+---
+
+学习路程：
+
+1.书籍
+
+语言基础：《Objective-C程序设计(第四版)》
+
+开发流程：《iOS编程(第四版)》BNR出品
+
+技能进阶：《Effectiv Objective-C 2.0》(52个有效方法，好书)
+
+其他参考：《iOS设计模式解析》《iOS与OSX多线程和内存管理》《iOS开发进阶》(部分)
+
+2.视频 
+
+各大网站基础教学视频(感谢之);
+斯坦福iOS8开发C193P课程部分
+
+3.项目
+
+Github上优秀项目
+
+各种练手小例子若干
+
+各种博客文章，官方文档，问答网站，答疑解难
 
 ---
-项目流水
+
+项目流水(可忽略)
 
 1.建立项目目录
 Define Global
